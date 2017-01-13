@@ -1,8 +1,9 @@
 # Components
 
 - HeaderContainer
-  - AuthFormContainer
-    - AuthForm
+  -AuthModal
+    - AuthFormContainer
+      - AuthForm
   - SearchContainer
     - Search
 

@@ -1,7 +1,7 @@
 module.exports = {
-  entry: 'frontend/wander.jsx',
+  entry: './frontend/wander.jsx',
   output: {
-    path: 'app/assets/javascripts',
+    path: './app/assets/javascripts',
     filename: 'bundle.js',
   },
   module: {

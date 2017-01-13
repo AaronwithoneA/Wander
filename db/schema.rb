@@ -11,20 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170106195740) do
+ActiveRecord::Schema.define(version: 20170113031949) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "dwellings", force: :cascade do |t|
+    t.integer  "owner_id"
+    t.string   "location"
+    t.float    "lat"
+    t.float    "long"
+    t.integer  "price"
+    t.string   "image_url"
+    t.string   "description"
+    t.string   "type"
+    t.integer  "guest_limit"
+    t.integer  "bedrooms"
+    t.integer  "beds"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.text     "about_this"
+    t.boolean  "featured"
+    t.integer  "rating"
+  end
+
+  add_index "dwellings", ["owner_id"], name: "index_dwellings_on_owner_id", using: :btree
+
   create_table "users", force: :cascade do |t|
-    t.string   "username",        null: false
     t.string   "email",           null: false
     t.string   "password_digest", null: false
     t.string   "session_token",   null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
-
-  add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
 end
