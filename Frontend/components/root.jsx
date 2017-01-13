@@ -14,7 +14,7 @@ const Root = ({ store }) => (
         <IndexRoute component={Home}/>
         <Route path="/login" component={ SessionFormContainer } />
         <Route path="/signup" component={ SessionFormContainer } />
-        <Route path="/dwellings/dwellingId" component={ DwellingContainer } />
+        <Route path="/dwellings/:dwellingId" component={ DwellingContainer } />
       </Route >
     </Router>
   </Provider>

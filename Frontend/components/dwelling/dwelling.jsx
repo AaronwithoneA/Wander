@@ -3,7 +3,7 @@ import React from 'react';
 class Dwelling extends React.Component {
 
   componentDidMount () {
-    this.props.fetchDwelling(this.props.params.id);
+    this.props.fetchDwelling(this.props.dwellingId);
   }
 
   render () {
