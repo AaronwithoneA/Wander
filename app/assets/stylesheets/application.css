@@ -26,6 +26,7 @@
  figure, figcaption, footer, header, hgroup,
  menu, nav, output, ruby, section, summary,
  time, mark, audio, video {
+  outline: none;
  	margin: 0;
  	padding: 0;
  	border: 0;
@@ -54,17 +55,19 @@
 .nav-button {
   display: flex;
   color: #1e1b15;
-  /*margin: 10px 22px 10px 1px;*/
-  padding: 25px 19px;
+  margin: 0 40px 0 0;
+  padding: 5px;
   background: transparent;
   font-size: 15px;
   font-family: "Magorian Regular",Georgia,Times,"Times New Roman",serif;
   border: none;
+  outline: none;
+  border: 1px solid transparent;
 }
 
 .nav-button:hover {
   color: #464957;
-  font-size: 20px;
+  border: 1px solid #1e1b15;
 }
 
 .login-form-container {
@@ -264,10 +267,10 @@
   color: grey;
 }
 
-.ratings {
+/*.ratings {
   margin-left: 10px;
   color: black;
-}
+}*/
 
 .types {
   display: flex;

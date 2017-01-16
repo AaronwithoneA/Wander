@@ -12,6 +12,8 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleGuest = this.handleGuest.bind(this);
     this.clearErrors = this.clearErrors.bind(this);
+    this.handleSignUpButton = this.handleSignUpButton.bind(this);
+    this.handleLoginButton = this.handleLoginButton.bind(this);
   }
 
   componentDidUpdate() {
