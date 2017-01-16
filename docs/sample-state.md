@@ -41,7 +41,7 @@
     1: {
       id: 1,
       image_url: "dsdf.jpeg",
-      dwelling_name: "Treetopia",
+      dwelling_name: "meh",
       location: "Shanghai",
       rating: 5,
       description: "stuff"

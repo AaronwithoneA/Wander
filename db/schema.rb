@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170113031949) do
+ActiveRecord::Schema.define(version: 20170116002502) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer  "guest_id",    null: false
+    t.integer  "dwelling_id", null: false
+    t.date     "start_date",  null: false
+    t.date     "end_date",    null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "bookings", ["dwelling_id"], name: "index_bookings_on_dwelling_id", using: :btree
+  add_index "bookings", ["guest_id"], name: "index_bookings_on_guest_id", using: :btree
 
   create_table "dwellings", force: :cascade do |t|
     t.integer  "owner_id"
@@ -33,9 +45,25 @@ ActiveRecord::Schema.define(version: 20170113031949) do
     t.text     "about_this"
     t.boolean  "featured"
     t.integer  "rating"
+    t.string   "title"
+    t.string   "check_in"
+    t.string   "check_out"
+    t.text     "house_rules"
   end
 
   add_index "dwellings", ["owner_id"], name: "index_dwellings_on_owner_id", using: :btree
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "guest_id",    null: false
+    t.integer  "dwelling_id", null: false
+    t.integer  "rating",      null: false
+    t.text     "body",        null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "reviews", ["dwelling_id"], name: "index_reviews_on_dwelling_id", using: :btree
+  add_index "reviews", ["guest_id"], name: "index_reviews_on_guest_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",           null: false
@@ -43,6 +71,9 @@ ActiveRecord::Schema.define(version: 20170113031949) do
     t.string   "session_token",   null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "image_url"
+    t.string   "fname"
+    t.string   "lname"
   end
 
 end

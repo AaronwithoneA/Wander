@@ -20,11 +20,11 @@ Phase 1: Backend setup and Front End User Authentication (2 days)
 
 Phase 2: Dwelling Model, API, components, and styling (3 days)
 
-  Objective: Dwellings can be created, read, edited and destroyed through the API.
+  Objective: Dwellings can be created, read, and destroyed through the API.
 
 Phase 3: Bookings Model, Component, and API (2 days)
 
-  Objective: Bookings belonging to Hosts, Guests, and Dwellings that can be created, read, edited and destroyed through the API.
+  Objective: Bookings belonging to Hosts, Guests, and Dwellings that can be created, read, and destroyed through the API.
 
 Phase 4: Dwelling Search (2 days)
 

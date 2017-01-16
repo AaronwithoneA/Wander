@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  email           :string           not null
+#  password_digest :string           not null
+#  session_token   :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  image_url       :string
+#  fname           :string
+#  lname           :string
+#
+
 class User < ActiveRecord::Base
   validates :password_digest, :session_token, :email, presence: true, uniqueness: true
   validates :password, length: {minimum: 6, allow_nil: true}
@@ -6,6 +21,8 @@ class User < ActiveRecord::Base
   after_initialize :ensure_session_token
 
   has_many :dwellings
+  has_many :reviews
+  has_many :bookings
 
 	def password=(password)
 		self.password_digest = BCrypt::Password.create(password)

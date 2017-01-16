@@ -13,18 +13,52 @@
  *= require_tree .
  *= require_self
  */
-
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed,
+ figure, figcaption, footer, header, hgroup,
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+ 	margin: 0;
+ 	padding: 0;
+ 	border: 0;
+ 	font-size: 100%;
+ 	font: inherit;
+ 	vertical-align: baseline;
+}
 
 .header {
   background: white;
-  height: 40px;
-  display: flex
+  height: 50px;
+  display: flex;
+  flex-direction: row;
   justify-content: flex-end;
 }
 
 .header-right {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 20px
+}
+
+.nav-button {
+  display: flex;
+  color: #1e1b15;
+  /*margin: 10px 22px 10px 1px;*/
+  padding: 0 19px;
+  background: transparent;
+  font-size: 15px;
+  font-family: "Magorian Regular",Georgia,Times,"Times New Roman",serif;
+  border: none;
 }
 
 .login-form-container {
@@ -32,7 +66,6 @@
   padding: 32px;
   height: 540px;
   width: 450px;
-  background: #0f0c08;
   position: fixed;
   bottom: 20%;
   right: 30%;
@@ -42,6 +75,7 @@
   /*box-shadow: 3px 3px 10px 5px #000;*/
   display: flex;
   justify-content: center;
+  background: #252314;
   box-sizing: border-box;
   color: #c7c69f;
   font-size: 16px;
@@ -57,7 +91,7 @@
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  background: #0f0c08;
+  background: #252314;
   color: #c7c69f;
   padding: 10px 35px 10px 10px;
   border: 1px solid #eeb67f;
@@ -101,16 +135,6 @@
   font-size: 14px;
   border-radius: 4px;
   font-family: inherit;
-}
-
-.nav-button {
-  color: #1e1b15;
-  margin: 10px 22px 10px 1px;
-  padding: 0 19px;
-  background: transparent;
-  font-size: 20px;
-  font-family: "Magorian Regular",Georgia,Times,"Times New Roman",serif;
-  border: none;
 }
 
 .redirect-statement {
@@ -159,4 +183,229 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -20px;
+}
+
+.dwelling-image {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -20px;
+}
+
+.dwelling-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.dwelling-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.dwelling-details {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  justify-content: center;
+}
+
+.dwelling-details-info {
+  padding-left: 155px;
+}
+
+.top-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 14px;
+  margin-top: 30px;
+  padding: 20px 0 20px 0;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey
+}
+
+.top-dwelling-info {
+  font-family: "Magorian Regular",Georgia,Times,"Times New Roman",serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top-host-info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 40px 0 40px;
+  color: grey;
+}
+
+.dwelling-title {
+  font-size: 30px;
+  margin
+}
+
+.location-and-ratings {
+  display: flex;
+  flex-direction: row;
+  margin: 8px 0;
+  color: grey;
+}
+
+.ratings {
+  margin-left: 10px;
+  color: black;
+}
+
+.types {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  color: grey;
+}
+
+.type {
+  padding: 5px;
+  /*margin: 0 30px 0 0;*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-this-listing {
+  padding: 40px 0 40px 0px;
+  /*border-bottom: 1px solid grey;*/
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 15px;
+  flex: wrap;
+  width: 100%;
+}
+
+.the-magic {
+  padding-bottom: 20px;
+  font-size: 19px;
+}
+
+.magic-content {
+  display: flex;
+  word-break: break-all;
+  padding-right: 30px;
+  font-size: 15px;
+}
+
+.extra-dwelling-section {
+  display: flex;
+  padding: 20px 0;
+  border-top: 1px solid grey;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: wrap;
+  width: 100%;
+  font-size: 15px;
+  font-family: inherit;
+
+}
+
+.extra-dwelling-section-content {
+  display: flex;
+  padding-right: 30px;
+  word-break: break-all;
+  width: 80%;
+}
+
+.extra-dwelling-section-title {
+  display: flex;
+  width: 20%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: grey;
+}
+
+.reviews-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%%;
+  justify-content: center;
+  padding-left: 155px;
+  border-top: 1px solid grey;
+}
+
+
+.review-user-info {
+  display: flex;
+  width: 20%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: grey;
+}
+
+.reviews-title {
+  padding: 40px 0 20px 0;
+  font-size: 19px;
+  font-family: inherit;
+}
+
+.dwelling-form-image {
+  height: 800px;
+  padding-top: 30px;
+}
+
+
+.dwelling-form-box {
+  margin: 0 auto;
+  width: 60%;
+  display: flex;
+  flex-direction: row
+  justify-content: space-between;
+  background: #252314;
+  box-sizing: border-box;
+  color: #c7c69f;
+  font-size: 16px;
+  font-family: "Magorian Regular",Georgia,Times,"Times New Roman",serif;
+}
+
+.dwelling-form {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.dwelling-input {
+  margin: 0 0 15px 0;
+  height: 60px;
+  width: 40%;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #252314;
+  color: #c7c69f;
+  padding: 10px 35px 10px 10px;
+  border: 1px solid #eeb67f;
+  border-radius: 2px;
+  font-family: inherit;
+}
+
+.dwelling-form-button {
+  width: 90%;
+  height: 50px;
+  margin: 20px auto 20px auto;
+  background: #eeba30;
+  border-radius: 4px;
+  color: black;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5px;
+  font-family: inherit;
 }

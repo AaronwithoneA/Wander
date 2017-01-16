@@ -14,6 +14,11 @@ class Header extends React.Component {
     hashHistory.push("/login");
   }
 
+  handleBecomeAHost(e) {
+    e.preventDefault();
+    hashHistory.push("/dwelling-form");
+  }
+
 
   loggedOutButtons () {
     return (
@@ -27,6 +32,7 @@ class Header extends React.Component {
   loggedInButtons () {
     return (
         <nav className="header-right">
+          <button className="nav-button" onClick={this.handleBecomeAHost}>Become a Host</button>
           <button className="nav-button" onClick={this.props.logout}>Log Out</button>
         </nav>
     );

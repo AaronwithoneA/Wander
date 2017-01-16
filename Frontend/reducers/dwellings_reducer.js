@@ -8,8 +8,7 @@ const dwellingsReducer = (state = {}, action) => {
     case RECEIVE_ALL_DWELLINGS:
       return action.dwellings;
     case RECEIVE_SINGLE_DWELLING:
-    const newDwelling = {[action.dwelling.id]: action.dwelling};
-    return merge({}, state, newDwelling);
+      return merge({}, state, action.dwelling);
     default:
       return state;
   }

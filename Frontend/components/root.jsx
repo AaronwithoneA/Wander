@@ -5,6 +5,7 @@ import App from './app.jsx';
 import SessionFormContainer from "./session/session_form_container";
 import Home from './home/home';
 import DwellingContainer from './dwelling/dwelling_container';
+import DwellingFormContainer from './dwelling/dwelling_form_container';
 
 
 const Root = ({ store }) => (
@@ -14,8 +15,9 @@ const Root = ({ store }) => (
         <IndexRoute component={Home}/>
         <Route path="/login" component={ SessionFormContainer } />
         <Route path="/signup" component={ SessionFormContainer } />
+        <Route path="/dwelling-form" component={ DwellingFormContainer } />
         <Route path="/dwellings/:dwellingId" component={ DwellingContainer } />
-      </Route >
+      </Route>
     </Router>
   </Provider>
 );
