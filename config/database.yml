@@ -78,8 +78,3 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: Wander_production
-  username: Wander
-  password: <%= ENV['WANDER_DATABASE_PASSWORD'] %>

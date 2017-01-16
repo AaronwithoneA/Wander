@@ -12,7 +12,7 @@
 #
 
 class Booking < ActiveRecord::Base
-  validates :guest_id, :dwelling_id, :start_date, :end_date, presence: true
+  validates :guest_id, :dwelling_id, :start_date, :end_date, :guest_number, presence: true
 
   belongs_to :guest,
   foreign_key: :guest_id,

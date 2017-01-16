@@ -19,6 +19,11 @@ class Header extends React.Component {
     hashHistory.push("/dwelling-form");
   }
 
+  handleJourneys(e) {
+    e.preventDefault();
+    hashHistory.push("/bookings");
+  }
+
 
   loggedOutButtons () {
     return (
@@ -32,6 +37,7 @@ class Header extends React.Component {
   loggedInButtons () {
     return (
         <nav className="header-right">
+          <button className="nav-button" onClick={this.handleJourneys}>Journeys</button>
           <button className="nav-button" onClick={this.handleBecomeAHost}>Become a Host</button>
           <button className="nav-button" onClick={this.props.logout}>Log Out</button>
         </nav>

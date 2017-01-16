@@ -1,10 +1,10 @@
 import React from 'react';
 import ReviewsContainer from '../review/reviews_container';
+import BookingFormContainer from '../booking/booking_form_container';
 
 class Dwelling extends React.Component {
 
   componentDidMount () {
-    // this.props.fetchReviews(this.props.dwellingId);
     this.props.fetchDwelling(this.props.dwellingId);
   }
 
@@ -80,6 +80,7 @@ class Dwelling extends React.Component {
               {reviews}
             </div>
           </div>
+          <BookingFormContainer dwellingId={this.props.dwellingId} dwelling={this.props.dwelling}/>
         </div>
       </div>
     );
