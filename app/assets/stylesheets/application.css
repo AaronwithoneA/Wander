@@ -331,7 +331,7 @@
 .reviews-box {
   display: flex;
   flex-direction: column;
-  width: 100%%;
+  width: 100%;
   justify-content: center;
   padding-left: 155px;
   border-top: 1px solid lightgrey;
