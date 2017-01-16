@@ -40,7 +40,7 @@ class Dwelling extends React.Component {
                     </div>
                   </div>
                   <div className="types">
-                    <div className="type">
+                    <div className="feature">
                       <img src="http://res.cloudinary.com/dg8v2pvxf/image/upload/v1484359475/house_icon_ump9sj.png"/>
                       {this.props.dwelling.description}
                     </div>
