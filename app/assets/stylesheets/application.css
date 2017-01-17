@@ -218,6 +218,7 @@
   width: 65%;
   min-width: 600px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .dwelling-details-info {
@@ -335,6 +336,7 @@
   justify-content: center;
   padding-left: 155px;
   border-top: 1px solid lightgrey;
+  box-sizing: border-box;
 }
 
 
@@ -351,6 +353,33 @@
   padding: 40px 0 20px 0;
   font-size: 19px;
   font-family: inherit;
+}
+
+.review-form-container {
+  height: 300px;
+  padding: 30px 0 30px 155px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.review-form-box {
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  border: 1px solid grey;
+}
+
+.review-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.review-input {
+  height: 200px;
 }
 
 .dwelling-form-image {

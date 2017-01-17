@@ -3,9 +3,9 @@ import Reviews from './reviews';
 import {fetchReviews, createReview} from '../../actions/review_actions';
 import {selectReviews} from '../../reducers/selectors';
 
-// const mapStateToProps = (state, ownProps) => ({
-//   reviews: state.reviews
-// });
+const mapStateToProps = (state, ownProps) => ({
+  dwelling: ownProps.dwelling
+});
 
 const mapDispatchToProps = dispatch => ({
   createReview: review => (createReview(review))
