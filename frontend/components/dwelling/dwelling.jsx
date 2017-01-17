@@ -1,7 +1,7 @@
 import React from 'react';
 import ReviewsContainer from '../review/reviews_container';
 import BookingFormContainer from '../booking/booking_form_container';
-import ReviewFormContainer from '../review/review_form';
+import ReviewFormContainer from '../review/review_form_container';
 
 class Dwelling extends React.Component {
 

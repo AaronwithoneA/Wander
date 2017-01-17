@@ -100,10 +100,12 @@ total() {
               <div>Total</div>
               <div>{this.total()}</div>
             </div>
-            <input
-              className="booking-form-button"
-              type="submit"
-              value="wingardium leviosa!" />
+            <div className="booking-form-button-container">
+              <input
+                className="booking-form-button"
+                type="submit"
+                value="wingardium leviosa!" />
+            </div>
           </form>
         </div>
       </div>

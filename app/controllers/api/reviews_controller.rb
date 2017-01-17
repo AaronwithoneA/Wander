@@ -1,13 +1,13 @@
 class Api::ReviewsController < ApplicationController
 
   def create
-    review = Review.new(review_params)
-    review.guest_id = current_user.id
-    if review.save
-      @reviews = Review.where(dwelling_id: review.dwelling_id)
-      render :index
+
+    @review = Review.new(review_params)
+    @review.guest_id = current_user.id
+    if @review.save
+      render :show
     else
-      render json: review.errors.full_messages, status: 422
+      render json: @review.errors.full_messages, status: 422
     end
   end
 
