@@ -22,17 +22,16 @@ class Booking < ActiveRecord::Base
   belongs_to :dwelling
 
   def start_before_end
-  return unless self.start_date && self.end_date
-  return if self.start_date < self.end_date
-    errors[:start_date] << "must come before end date"
-    errors[:end_date] << "must come after start date"
-end
+    return unless self.start_date && self.end_date
+    return if self.start_date < self.end_date
+      errors[:start_date] << "must come before end date"
+      errors[:end_date] << "must come after start date"
+    end
 
-def dwelling_is_available
-  return unless self.start_date && self.end_date
-  unless self.spot.is_available?(self.start_date, self.end_date)
-    errors[:spot] << "unavailable at selected dates"
+  def dwelling_is_available
+    return unless self.start_date && self.end_date
+    unless self.spot.is_available?(self.start_date, self.end_date)
+      errors[:spot] << "unavailable at selected dates"
+    end
   end
-end
-end
 end

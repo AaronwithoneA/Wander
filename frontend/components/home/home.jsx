@@ -11,7 +11,6 @@ const Home = (props) => {
       <div className="featured-dwellings">
         <div className="search-bar">
         </div>
-        <h2>Dwellings</h2>
       </div>
     </div>
   );

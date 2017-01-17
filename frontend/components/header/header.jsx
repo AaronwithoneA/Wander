@@ -24,6 +24,12 @@ class Header extends React.Component {
     hashHistory.push("/bookings");
   }
 
+  handleLogout(e) {
+    e.preventDefault();
+    this.props.logout();
+    hashHistory.push("/");
+  }
+
 
   loggedOutButtons () {
     return (
