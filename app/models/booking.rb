@@ -13,7 +13,7 @@
 
 class Booking < ActiveRecord::Base
   validates :guest_id, :dwelling_id, :start_date, :end_date, :guest_number, presence: true
-  validate :start_befor_end, :dwelling_is_available
+  validate :start_before_end
 
   belongs_to :guest,
   foreign_key: :guest_id,
@@ -28,10 +28,10 @@ class Booking < ActiveRecord::Base
       errors[:end_date] << "must come after start date"
     end
 
-  def dwelling_is_available
-    return unless self.start_date && self.end_date
-    unless self.spot.is_available?(self.start_date, self.end_date)
-      errors[:spot] << "unavailable at selected dates"
-    end
-  end
+  # def dwelling_is_available
+  #   return unless self.start_date && self.end_date
+  #   unless self.spot.is_available?(self.start_date, self.end_date)
+  #     errors[:spot] << "unavailable at selected dates"
+  #   end
+  # end
 end
