@@ -363,38 +363,37 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-}
-
-.review-form-box {
-  height: 100%;
-  width: 100%;
-  padding: 40px;
-  border: 1px solid grey;
+  align-items: center;
 }
 
 .review-form {
+  height: 100%;
+  width: 100%;
+  border: 1px solid grey;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
 .review-input {
-  height: 200px;
+  width: 90%;
 }
 
 .dwelling-form-image {
-  height: 800px;
-  padding-top: 30px;
+  height: 700px;
+  display: flex;
+  justify-content: flex-end;
+
 }
 
 
 .dwelling-form-box {
-  margin: 0 auto;
-  width: 60%;
+  width: 388px;
+  height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  background: #363946;
+  justify-content: flex-end;
+  background: white;
   box-sizing: border-box;
   color: #c7c69f;
   font-size: 16px;
@@ -411,15 +410,15 @@
 
 .dwelling-input {
   margin: 0 0 15px 0;
-  height: 60px;
+  height: 45px;
   width: 40%;
-  font-size: 18px;
+  font-size: 14px;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
   background: #363946;
-  color: #c7c69f;
-  padding: 10px 35px 10px 10px;
+  color: white;
+  padding: 5px 10px 5px 10px;
   border: 1px solid #eeb67f;
   border-radius: 2px;
   font-family: inherit;
@@ -428,7 +427,7 @@
 .dwelling-form-button {
   width: 90%;
   height: 50px;
-  margin: 20px auto 20px auto;
+  margin: 20px auto 60px auto;
   background: #eeba30;
   border-radius: 4px;
   color: black;
@@ -437,6 +436,10 @@
   justify-content: center;
   padding-bottom: 5px;
   font-family: inherit;
+}
+
+.dwelling-form-button:hover {
+  border: 2px solid #363946;
 }
 
 .booking-form-container {

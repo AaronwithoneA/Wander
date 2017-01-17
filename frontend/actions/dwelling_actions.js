@@ -38,3 +38,8 @@ export const deleteDwelling = id => dispatch => (
   APIUtil.deleteDwelling(id)
   .then(dwelling => dispatch(removeDwelling(dwelling)))
 );
+
+export const fetchSearchDwellings = filters => dispatch => (
+  APIUtil.fetchSearchDwellings(filters)
+    .then((dwellings) => dispatch(receiveAllDwellings(dwellings)))
+);

@@ -7,7 +7,7 @@ class Api::ReviewsController < ApplicationController
       @reviews = Review.where(dwelling_id: review.dwelling_id)
       render :index
     else
-      render json: @review.errors.full_messages, status: 422
+      render json: review.errors.full_messages, status: 422
     end
   end
 

@@ -21,5 +21,5 @@ export const fetchReviews = id => dispatch => (
 
 export const createReview = (review) => dispatch => (
   APIUtil.createReview(review)
-  .then(review1 => dispatch(receiveSingleReview(review)))
+  .then(review1 => dispatch(receiveSingleReview(review1)))
 );

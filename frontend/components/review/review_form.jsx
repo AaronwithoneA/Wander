@@ -2,8 +2,8 @@ import React from 'react';
 
 class ReviewForm extends React.Component {
   constructor (props) {
-    super(props);
 
+    super(props);
     this.state = {
     body: "",
     rating: "",
@@ -21,25 +21,24 @@ class ReviewForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const review = Object.assign({}, this.state);
+    debugger
     this.props.createReview(review);
   }
 
   render () {
     return (
       <div className="review-form-container" >
-        <div className="review-form-box">
-          <form onSubmit={this.handleSubmit} className="review-form">
-            <input
-              type="text"
-              value={this.state.body}
-              onChange={this.update("body")}
-              className="review-input"/>
-            <input
-              className="review-form-button"
-              type="submit"
-              value="Sonorus" />
-          </form>
-        </div>
+        <form onSubmit={this.handleSubmit} className="review-form">
+          <input
+            type="text"
+            value={this.state.body}
+            onChange={this.update("body")}
+            className="review-input"/>
+          <input
+            className="review-form-button"
+            type="submit"
+            value="Sonorus" />
+        </form>
       </div>
     );
   }

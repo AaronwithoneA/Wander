@@ -26,3 +26,11 @@ export const deleteDwelling = id => (
     url: `api/dwellings/${id}`,
   })
 );
+
+export const fetchSearchDwellings = filters => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/dwellings',
+    data: {filters}
+  })
+);

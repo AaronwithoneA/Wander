@@ -21,6 +21,7 @@ class DwellingForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handlePhoto = this.handlePhoto.bind(this);
   }
 
   update(field) {
@@ -38,7 +39,22 @@ class DwellingForm extends React.Component {
     });
   }
 
-
+  handlePhoto(e) {
+    e.preventDefault();
+    cloudinary.openUploadWidget(
+      {
+        cloud_name: 'dg8v2pvxf',
+        upload_preset: 'z9nmrinj',
+        theme: 'minimal',
+      },
+      (errors, coverInfo) => {
+        if (errors === null) {
+          let cover_info = coverInfo[0].url;
+          this.setState({image_url: cover_info});
+        }
+      }
+    );
+  }
   render () {
     return (
       <div className="dwelling-form-image">
@@ -88,7 +104,7 @@ class DwellingForm extends React.Component {
               className="dwelling-input"/>
             <input
               type="text"
-              placeholder="Maximum number of guests"
+              placeholder="Maximum guests"
               value={this.state.guestLimit}
               onChange={this.update("guest_limit")}
               className="dwelling-input"/>
