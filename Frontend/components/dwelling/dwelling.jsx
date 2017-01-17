@@ -40,7 +40,7 @@ class Dwelling extends React.Component {
                     </div>
                   </div>
                   <div className="types">
-                    <div className="feature">
+                    <div className="type">
                       <img src="http://res.cloudinary.com/dg8v2pvxf/image/upload/v1484359475/house_icon_ump9sj.png"/>
                       {this.props.dwelling.description}
                     </div>
@@ -79,6 +79,7 @@ class Dwelling extends React.Component {
             <div className="review-container">
               {reviews}
             </div>
+            <ReviewForm dwellingId=this.props.dwellingId />
           </div>
           <BookingFormContainer dwellingId={this.props.dwellingId} dwelling={this.props.dwelling}/>
         </div>
