@@ -1,6 +1,7 @@
 import React from 'react';
 import ReviewsContainer from '../review/reviews_container';
 import BookingFormContainer from '../booking/booking_form_container';
+import ReviewForm from '../review/review_form'
 
 class Dwelling extends React.Component {
 
@@ -79,7 +80,7 @@ class Dwelling extends React.Component {
             <div className="review-container">
               {reviews}
             </div>
-            <ReviewForm dwellingId=this.props.dwellingId />
+            <ReviewForm dwellingId={this.props.dwellingId} />
           </div>
           <BookingFormContainer dwellingId={this.props.dwellingId} dwelling={this.props.dwelling}/>
         </div>
