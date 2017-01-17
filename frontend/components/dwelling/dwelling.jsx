@@ -13,8 +13,8 @@ class Dwelling extends React.Component {
     const reviews = this.props.dwelling.reviews ? <ReviewsContainer dwelling={this.props.dwelling}/> : "";
     return (
       <div className="dwelling-page">
-        <div className="dwelling-image">
-          <img src={this.props.dwelling.image_url}></img>
+        <div className="dwelling-image-container">
+          <img className ="dwelling-image" src={this.props.dwelling.image_url}></img>
         </div>
         <div className="dwelling-info">
           <div className="dwelling-details">

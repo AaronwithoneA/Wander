@@ -193,14 +193,19 @@
   background-position-y: -20px;
 }
 
+.dwelling-image-container {
+  height: 480px;
+  width: 100%;
+}
 .dwelling-image {
   width: 100%;
-  height: 450px;
+  height: 100%;
   overflow: hidden;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -20px;
+  object-fit: cover;
 }
 
 .dwelling-page {
