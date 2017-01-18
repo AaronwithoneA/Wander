@@ -7,7 +7,7 @@ class FilterForm extends React.Component {
    super(props);
    this.handleChange = this.handleChange.bind(this);
    this.state ={
-     maxPrice: 80
+     maxPrice: 150
    };
  }
 
@@ -24,7 +24,7 @@ class FilterForm extends React.Component {
         <span className="filter"></span>
         <br/>
         <div className="price-filter-box">
-          <h3>Maximum Price</h3>
+          <h3 className="filter-label">Maximum Price</h3>
           <div className="slider-box">
             <Slider
               min={30}
@@ -32,7 +32,9 @@ class FilterForm extends React.Component {
               step={5}
               orientation={"horizontal"}
               value={this.state.maxPrice}
+              className="rangeslider-horizontal"
               onChange={this.handleChange}/>
+            <div className="slider-status">{this.state.maxPrice}</div>
           </div>
         </div>
       </div>

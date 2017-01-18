@@ -651,6 +651,7 @@
 }
 
 .filter-container {
+  font-family: "Magorian Regular",Georgia,Times,"Times New Roman",serif;
   width: 70%;
 }
 .price-filter-box {
@@ -659,6 +660,33 @@
 .slider-box {
   width: 300px;
 }
+
+.filter-label {
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.slider-status {
+  font-size: 16px;
+  font-family: inherit;
+}
+/*.rangeslider-horizontal {
+  height: 20px;
+  border-radius: 10px;
+  .rangeslider__fill {
+    height: 100%;
+    background: #27ae60;
+    border-radius: 10px;
+    top: 0;
+  }
+  .rangeslider__handle {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    top: -10px;
+  }
+}*/
+
 
 .dwelling-box {
   height: 280px;
@@ -677,7 +705,7 @@
 }
 
 .dwelling-index-image:hover {
-  opacity: .5;
+  opacity: .7;
 }
 
 .dwelling-index-info {
