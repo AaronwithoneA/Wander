@@ -12,12 +12,10 @@ const dwellingsReducer = (state = {}, action) => {
       return merge({}, state, action.dwelling);
     case RECEIVE_SINGLE_REVIEW:
     console.log(action);
-      return merge({}, state, {
-        [action.review.dwelling_id]: { reviews: {
-          [action.review.id]: action.review
-          }
-        }
-      });
+      const newState = merge({}, state);
+        newState[action.review.dwelling_id].reviews =
+          [ ...state[action.review.dwelling_id].reviews, action.review];
+      return newState;
     default:
       return state;
   }

@@ -14,7 +14,7 @@ class Dwelling extends React.Component {
     return (
       <div className="dwelling-page">
         <div className="dwelling-image-container">
-          <img className ="dwelling-image" src={this.props.dwelling.image_url}></img>
+            <img className ="dwelling-image" src={this.props.dwelling.image_url}></img>
         </div>
         <div className="dwelling-info">
           <div className="dwelling-details">

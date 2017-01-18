@@ -1,7 +1,7 @@
 class Api::BookingsController < ApplicationController
 
   def index
-    @bookings = Booking.where(guest_id: current_user.id)
+    @bookings = Booking.where(guest_id: current_user.id).to_a.reverse!
   end
 
   def create

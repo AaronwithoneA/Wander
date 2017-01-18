@@ -3,7 +3,6 @@ import React from 'react';
 class Reviews extends React.Component {
 
   render () {
-    debugger
   return (
     <div className="reviews-box">
       <div className="reviews-title">
