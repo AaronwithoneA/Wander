@@ -21,20 +21,20 @@ class FilterForm extends React.Component {
   render () {
     return(
       <div className="filter-container">
-        <span className="filter"></span>
-        <br/>
-        <div className="price-filter-box">
-          <h3 className="filter-label">Maximum Price</h3>
-          <div className="slider-box">
-            <Slider
-              min={30}
-              max={1000}
-              step={5}
-              orientation={"horizontal"}
-              value={this.state.maxPrice}
-              className="rangeslider-horizontal"
-              onChange={this.handleChange}/>
-            <div className="slider-status">{this.state.maxPrice}</div>
+        <div className="filter">
+          <div className="price-filter-box">
+            <h3 className="filter-label">Maximum Price</h3>
+            <div className="slider-box">
+              <Slider
+                min={30}
+                max={1000}
+                step={5}
+                orientation={"horizontal"}
+                value={this.state.maxPrice}
+                className="rangeslider-horizontal"
+                onChange={this.handleChange}/>
+              <div className="slider-status">{this.state.maxPrice}</div>
+            </div>
           </div>
         </div>
       </div>

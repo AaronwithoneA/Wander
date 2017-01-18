@@ -184,7 +184,7 @@
 }
 
 .home-image {
-  background: url(https://s-media-cache-ak0.pinimg.com/originals/86/13/e3/8613e3e693717bab025e6313ca1a8875.jpg) no-repeat center center fixed;
+  background: url(https://s-media-cache-ak0.pinimg.com/originals/86/13/e3/8613e3e693717bab025e6313ca1a8875.jpg) no-repeat center center ;
   width: 100%;
   height: 580px;
   display: flex;
@@ -655,13 +655,33 @@
 
 .filter-container {
   font-family: "Magorian Regular",Georgia,Times,"Times New Roman",serif;
-  width: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+  .filter {
+    width: 80%;
+    padding: 20px;
+    margin: 50px;
+    border: 1px solid lightgrey;
+    display: flex;
+    justify-content: space-around;
+
+  }
+
 }
 .price-filter-box {
   width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 .slider-box {
   width: 300px;
+  margin: none;
 }
 
 .filter-label {
@@ -673,23 +693,6 @@
   font-size: 16px;
   font-family: inherit;
 }
-/*.rangeslider-horizontal {
-  height: 20px;
-  border-radius: 10px;
-  .rangeslider__fill {
-    height: 100%;
-    background: #27ae60;
-    border-radius: 10px;
-    top: 0;
-  }
-  .rangeslider__handle {
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
-    top: -10px;
-  }
-}*/
-
 
 .dwelling-box {
   height: 280px;
