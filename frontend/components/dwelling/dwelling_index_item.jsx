@@ -17,18 +17,16 @@ class DwellingIndexItem extends React.Component {
   render () {
     return (
       <li className="dwelling-box">
-            <img
-              className="dwelling-index-image"
-              src={this.props.dwelling.image_url}
-              onClick={this.imageLink}/>
-
-
-
-          <div className="dwelling-index-info">
-            <div className="dwelling-index-price-location-box"></div>
-            <div className="dwelling-index-price">{this.props.dwelling.price}</div>
+        <img
+          className="dwelling-index-image"
+          src={this.props.dwelling.image_url}
+          onClick={this.imageLink}/>
+        <div className="dwelling-index-info">
+          <div className="dwelling-index-price-location-box">
+            <div className="dwelling-index-price">${this.props.dwelling.price}</div>
             <div className="dwelling-index-location">{this.props.dwelling.location}</div>
           </div>
+      </div>
 
       </li>
 
