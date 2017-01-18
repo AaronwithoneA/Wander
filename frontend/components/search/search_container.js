@@ -1,14 +1,12 @@
-
 import { connect } from 'react-redux';
 
 import {fetchSearchDwellings} from '../../actions/dwelling_actions';
-import { updateFilter, updateBounds, updatePrice, updateDate } from '../../actions/filter_actions';
-import { asArray } from '../../reducers/selectors';
-
+import {updateFilter} from '../../actions/filter_actions';
+import { asDwellingsArray } from '../../reducers/selectors';
 import Search from './search';
 
 const mapStateToProps = state => ({
-  dwellings: asArray(state),
+  dwellings: asDwellingsArray(state),
   minPrice: state.filters.minPrice,
   maxPrice: state.filters.maxPrice
 });

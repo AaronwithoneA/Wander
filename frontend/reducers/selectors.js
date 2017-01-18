@@ -20,3 +20,7 @@ export const selectBookings = state => {
   });
   return bookings;
 };
+
+export const asDwellingsArray = ({ dwellings }) =>(
+  Object.keys(dwellings).map(key => dwellings[key])
+);

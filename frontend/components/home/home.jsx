@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchContainer from '../search/search_container';
 
 const Home = (props) => {
   return (
@@ -7,10 +8,8 @@ const Home = (props) => {
       <div className="home-image">
         <h1 className="title-text"></h1>
       </div>
-
-      <div className="featured-dwellings">
-        <div className="search-bar">
-        </div>
+      <div>
+        <SearchContainer />
       </div>
     </div>
   );

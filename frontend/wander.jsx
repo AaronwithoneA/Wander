@@ -6,6 +6,7 @@ import * as APIUtil from './util/review_api_util';
 import {fetchAllDwellings, fetchDwelling} from './actions/dwelling_actions';
 import {fetchReviews, createReview, receiveReviews} from './actions/review_actions';
 import {fetchBookings, receiveBookings} from './actions/booking_actions';
+import Rheostat from 'rheostat';
 
 
 
@@ -27,4 +28,5 @@ document.addEventListener('DOMContentLoaded', () => {
     window.receiveReviews = receiveReviews;
     const root = document.getElementById('root');
     ReactDOM.render(<Root store={store}/>, root);
+
 });
