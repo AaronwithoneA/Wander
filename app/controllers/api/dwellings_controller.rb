@@ -14,13 +14,21 @@ class Api::DwellingsController < ApplicationController
   end
 
   def index
+    # @dwellings = @dwellings.where("price < ?",params[:maxPrice])
+
     @dwellings = Dwelling.all
   end
 
   private
 
   def dwelling_params
-    params.require(:dwelling).permit(:title, :about_this, :check_in, :check_out, :house_rules, :location, :price, :image_url, :description, :guest_limit, :bedrooms, :beds)
+    params.require(:dwelling).permit(:title, :about_this, :check_in,
+    :check_out, :house_rules, :location, :price, :image_url,
+    :description, :guest_limit, :bedrooms, :beds, :max_price, :min_price)
+  end
+
+  def price_range
+    (params[:minPrice]..params[:maxPrice])
   end
 
 end

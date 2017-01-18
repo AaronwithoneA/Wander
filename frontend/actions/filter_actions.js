@@ -1,26 +1,43 @@
-export const UPDATE_BOUNDS = "UPDATE_BOUNDS";
-export const UPDATE_PRICE = "UPDATE_PRICE";
-export const UPDATE_DATE = "UPDATE_DATE";
+import {fetchSearchDwellings} from '../util/dwelling_api_util';
 
-export const updateBounds = (bounds) => {
+export const CHANGE_BOUNDS = "CHANGE_BOUNDS";
+export const CHANGE_PRICE = "CHANGE_PRICE";
+export const CHANGE_DATE = "CHANGE_DATE";
+
+export const changeBounds = (bounds) => {
   return {
-    type: UPDATE_BOUNDS,
+    type: CHANGE_BOUNDS,
     bounds,
   };
 };
 
-export const updatePrice = (max, min) => {
+export const changePrice = (max, min) => {
   return {
-    type: UPDATE_PRICE,
+    type: CHANGE_PRICE,
     max,
     min
   };
 };
 
-export const updateDate = (startDate, endDate) => {
+export const changeDate = (startDate, endDate) => {
   return {
-    type: UPDATE_DATE,
+    type: CHANGE_DATE,
     startDate,
     endDate,
   };
+};
+
+export const updateBounds = (bounds) => (dispatch, getState) => {
+  dispatch(changeBounds(bounds));
+  return fetchSearchDwellings(getState().filters)(dispatch);
+};
+
+export const updatePrice = (maxPrice, minPrice) => (dispatch, getState) => {
+  dispatch(changePrice(maxPrice, minPrice));
+  return fetchSearchDwellings(getState().filters)(dispatch);
+};
+
+export const updateDate = (startDate, endDate) => (dispatch, getState) => {
+    dispatch(changeDate(startDate, endDate));
+    return fetchSearchDwellings(getState().filters)(dispatch);
 };

@@ -76,6 +76,7 @@ total() {
                     type="date"
                     placeholder="mm/dd/yyyy"
                     value={this.state.end_date}
+                    min={this.state.start_date}
                     onChange={this.update("end_date")}
                     className="booking-date-input"/>
               </div>

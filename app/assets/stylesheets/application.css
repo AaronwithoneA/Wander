@@ -498,7 +498,7 @@
 
 .booking-form-box {
   width: 50%;
-  height: 360px;
+  height: 375px;
   padding: 0 25px;
   border: 1px solid grey;
 }
@@ -633,4 +633,8 @@
   font-size: 18px;
   color: inherit;
   margin-bottom: 60px;
+}
+
+.map {
+  width: 500px;
 }

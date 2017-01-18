@@ -5,11 +5,23 @@ import ReviewFormContainer from '../review/review_form_container';
 
 class Dwelling extends React.Component {
 
+  rating () {
+    const stars = [];
+    for (var i = 0; i < parseInt(this.props.dwelling.rating/
+      this.props.dwelling.reviews.length); i++) {
+      stars.push(
+        <img key={i} className="stars" src="http://res.cloudinary.com/dg8v2pvxf/image/upload/v1484359474/star-icon_cqaeqo.png"/>
+      );
+    }
+    return stars
+  }
+
   componentDidMount () {
     this.props.fetchDwelling(this.props.dwellingId);
   }
 
   render () {
+    debugger
     const reviews = this.props.dwelling.reviews ? <ReviewsContainer dwelling={this.props.dwelling}/> : "";
     return (
       <div className="dwelling-page">
@@ -37,7 +49,7 @@ class Dwelling extends React.Component {
                       {this.props.dwelling.location}
                     </div>
                     <div className="ratings">
-                       * * * * *
+                      {this.rating}
                     </div>
                   </div>
                   <div className="types">

@@ -35,4 +35,9 @@ class Dwelling < ActiveRecord::Base
   has_many :reviews
 
   has_many :bookings
+
+  def rating
+    rating = 0
+    self.reviews.average(:rating).to_i
+  end
 end

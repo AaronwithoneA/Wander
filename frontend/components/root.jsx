@@ -7,6 +7,7 @@ import Home from './home/home';
 import DwellingContainer from './dwelling/dwelling_container';
 import DwellingFormContainer from './dwelling/dwelling_form_container';
 import BookingIndexContainer from './booking/booking_index_container';
+import DwellingMap from './search/dwelling_map';
 
 
 const Root = ({ store }) => {
@@ -36,6 +37,7 @@ const Root = ({ store }) => {
           <Route path="/dwelling-form" component={ DwellingFormContainer } onEnter={_ensureLoggedIn}/>
           <Route path="/dwellings/:dwellingId" component={ DwellingContainer } />
           <Route path="/bookings" component={ BookingIndexContainer } onEnter={_ensureLoggedIn}/>
+          <Route path="/map" component={ DwellingMap } />
         </Route>
       </Router>
     </Provider>
