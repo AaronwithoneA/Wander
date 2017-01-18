@@ -186,7 +186,7 @@
 .home-image {
   background: url(https://s-media-cache-ak0.pinimg.com/originals/86/13/e3/8613e3e693717bab025e6313ca1a8875.jpg) no-repeat center center ;
   width: 100%;
-  height: 580px;
+  height: 480px;
   display: flex;
   object-fit: cover;
   overflow: hidden;
@@ -732,6 +732,6 @@
   margin-right: 10px;
 }
 
-.dwelling-index-location {
+/*.dwelling-index-location {
 
-}
+}*/
