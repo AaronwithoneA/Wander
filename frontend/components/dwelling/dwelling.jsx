@@ -21,7 +21,6 @@ class Dwelling extends React.Component {
   }
 
   render () {
-    debugger
     const reviews = this.props.dwelling.reviews ? <ReviewsContainer dwelling={this.props.dwelling}/> : "";
     return (
       <div className="dwelling-page">

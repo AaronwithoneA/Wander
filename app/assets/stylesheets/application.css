@@ -35,13 +35,13 @@
  	vertical-align: baseline;
 }
 
-.header {
+.header-box {
   background: white;
   height: 50px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  border-bottom: 1px solid #1e1b15;
+  justify-content: space-between;
+  border-bottom: 2px solid #1e1b15;
 }
 
 .header-right {
@@ -49,13 +49,22 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+}
 
+.header-logo {
+  margin-left: 30px;
+  width: 100px;
+  height: auto;
+}
+
+.header-logo:hover {
+  cursor: pointer;
 }
 
 .nav-button {
   display: flex;
   color: #1e1b15;
-  margin: 0 40px 0 0;
+  margin: 0 30px 0 0;
   padding: 5px;
   background: transparent;
   font-size: 15px;
@@ -89,7 +98,7 @@
   color: #1e1b15;
   font-size: 16px;
   font-family: "Magorian Regular",Georgia,Times,"Times New Roman",serif;
-
+  outline: none;
 }
 
 
@@ -107,6 +116,7 @@
   border: 1px solid #363946;
   border-radius: 2px;
   font-family: inherit;
+  outline: none;
 }
 
 .errors {
@@ -130,6 +140,7 @@
   padding-bottom: 5px;
   border-bottom: 1px solid #c7c69f;
   font-family: inherit;
+  outline: none;
 }
 
 .redirect-button {
@@ -144,6 +155,7 @@
   font-size: 14px;
   border-radius: 4px;
   font-family: inherit;
+  outline: none;
 }
 
 .redirect-statement {
@@ -186,7 +198,7 @@
 .home-image {
   background: url(https://s-media-cache-ak0.pinimg.com/originals/86/13/e3/8613e3e693717bab025e6313ca1a8875.jpg) no-repeat center center ;
   width: 100%;
-  height: 480px;
+  height: 560px;
   display: flex;
   object-fit: cover;
   overflow: hidden;
@@ -396,6 +408,7 @@
 
 .review-rating {
   font-family: inherit;
+  outline: none;
 }
 
 .review-input {
@@ -405,6 +418,7 @@
   margin-bottom: 20px;
   font-family: inherit;
   font-size: 16px;
+  outline: none;
 }
 
 .review-form-button {
@@ -419,6 +433,7 @@
   justify-content: center;
   padding-bottom: 5px;
   font-family: inherit;
+  outline: none;
 }
 
 .review-form-button:hover {
@@ -438,7 +453,7 @@
 }
 
 .dwelling-form-box {
-  width: 388px;
+  width: 480px;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -472,6 +487,73 @@
   border: 1px solid #eeb67f;
   border-radius: 2px;
   font-family: inherit;
+  outline: none;
+}
+
+.dwelling-input-long {
+  margin: 0 0 15px 0;
+  height: 45px;
+  width: 90%;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #363946;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #eeb67f;
+  border-radius: 2px;
+  font-family: inherit;
+  outline: none;
+}
+
+.house-rules-input {
+  margin: 0 0 15px 0;
+  height: 60px;
+  width: 90%;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #363946;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #eeb67f;
+  border-radius: 2px;
+  font-family: inherit;
+  outline: none;
+}
+
+.dwelling-about-this-input {
+  margin: 0 0 15px 0;
+  height: 110px;
+  width: 90%;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #363946;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #eeb67f;
+  border-radius: 2px;
+  font-family: inherit;
+  outline: none;
+}
+
+.photo-button {
+  width: 40%;
+  height: 30px;
+  margin: 20px auto 1px auto;
+  background: #aaaca6;
+  border-radius: 12px;
+  color: black;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5px;
+  font-family: inherit;
+  outline: none;
 }
 
 .dwelling-form-button {
@@ -486,6 +568,7 @@
   justify-content: center;
   padding-bottom: 5px;
   font-family: inherit;
+  outline: none;
 }
 
 .dwelling-form-button:hover {
@@ -535,7 +618,7 @@
 .booking-date-input {
   width: 100%;
   height: 30px;
-
+  outline: none;
 }
 
 .booking-guest-box {
@@ -543,7 +626,8 @@
 }
 .booking-guest-input {
   height: 30px;
-  width: 100%
+  width: 100%;
+  outline: none;
 }
 
 .booking-fees {
@@ -572,6 +656,7 @@
   justify-content: center;
   padding-bottom: 5px;
   font-family: inherit;
+  outline: none;
 }
 
 .booking-form-button:hover {
@@ -660,15 +745,15 @@
   justify-content: center;
 }
 
-  .filter {
-    width: 80%;
-    padding: 20px;
-    margin: 50px;
-    border: 1px solid lightgrey;
-    display: flex;
-    justify-content: space-around;
+.filter {
+  width: 80%;
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid lightgrey;
+  display: flex;
+  justify-content: space-around;
 
-  }
+}
 
 }
 .price-filter-box {

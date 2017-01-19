@@ -15,8 +15,6 @@ class DwellingForm extends React.Component {
     bedrooms: "",
     beds: "",
     title: "",
-    check_in: "",
-    check_out: "",
     house_rules: ""
     };
 
@@ -45,9 +43,10 @@ class DwellingForm extends React.Component {
       {
         cloud_name: 'dg8v2pvxf',
         upload_preset: 'z9nmrinj',
-        theme: 'minimal',
+        theme: 'minimal'
       },
       (errors, coverInfo) => {
+        console.log(errors);
         if (errors === null) {
           let cover_info = coverInfo[0].url;
           this.setState({image_url: cover_info});
@@ -65,19 +64,13 @@ class DwellingForm extends React.Component {
               placeholder="Dwelling title"
               value={this.state.title}
               onChange={this.update("title")}
-              className="dwelling-input"/>
-            <input
-              type="text"
-              placeholder="About this dwelling"
-              value={this.state.about_this}
-              onChange={this.update("about_this")}
-              className="dwelling-input"/>
+              className="dwelling-input-long"/>
             <input
               type="text"
               placeholder="Location"
               value={this.state.location}
               onChange={this.update("location")}
-              className="dwelling-input"/>
+              className="dwelling-input-long"/>
             <input
               type="text"
               placeholder="Number of bedrooms"
@@ -108,30 +101,20 @@ class DwellingForm extends React.Component {
               value={this.state.guestLimit}
               onChange={this.update("guest_limit")}
               className="dwelling-input"/>
-            <input
+
+            <textarea
               type="text"
-              placeholder="Check in time"
-              value={this.state.check_in}
-              onChange={this.update("check_in")}
-              className="dwelling-input"/>
-            <input
-              type="text"
-              placeholder="Check out time"
-              value={this.state.check_out}
-              onChange={this.update("check_out")}
-              className="dwelling-input"/>
-            <input
-              type="text"
-              placeholder="House rules"
-              value={this.state.house_rules}
-              onChange={this.update("house_rules")}
-              className="dwelling-input"/>
-            <input
-              type="text"
-              placeholder="Image url"
-              value={this.state.image_url}
-              onChange={this.update("image_url")}
-              className="dwelling-input"/>
+              placeholder="About this dwelling"
+              value={this.state.about_this}
+              onChange={this.update("about_this")}
+              className="dwelling-about-this-input"></textarea>
+            <textarea
+                type="text"
+                placeholder="House rules"
+                value={this.state.house_rules}
+                onChange={this.update("house_rules")}
+                className="house-rules-input"></textarea>
+            <button className="photo-button" onClick={this.handlePhoto} >Upload dwelling photo</button>
             <input
               className="dwelling-form-button"
               type="submit"

@@ -15,6 +15,7 @@ class BookingIndex extends React.Component {
   // }
 
   render () {
+    debugger
     const bookings =  <div>
                         <ul className="booking-index-container">
                         {this.props.bookings.map((booking, idx) =>(

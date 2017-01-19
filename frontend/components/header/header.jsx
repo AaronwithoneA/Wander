@@ -30,29 +30,50 @@ class Header extends React.Component {
     hashHistory.push("/");
   }
 
+  handleLogo(e) {
+    e.preventDefault();
+    hashHistory.push("/");
+  }
+
 
   loggedOutButtons () {
     return (
-      <nav className="header-right">
-        <button className ="nav-button" onClick={this.handleSignUpButton}>Sign Up</button>
-        <button className ="nav-button" onClick={this.handleLoginButton}>Log In</button>
-      </nav>
+      <div className="header-box">
+        <div>
+          <img
+            className="header-logo"
+            src="https://res.cloudinary.com/dg8v2pvxf/image/upload/c_crop,h_1473/v1484790087/wander03_vs5vxa.jpg"
+            onClick={this.handleLogo}/>
+        </div>
+        <nav className="header-right">
+          <button className ="nav-button" onClick={this.handleSignUpButton}>Sign Up</button>
+          <button className ="nav-button" onClick={this.handleLoginButton}>Log In</button>
+        </nav>
+      </div>
     );
   }
 
   loggedInButtons () {
     return (
+      <div className="header-box">
+        <div>
+          <img
+            className="header-logo"
+            src="https://res.cloudinary.com/dg8v2pvxf/image/upload/c_crop,h_1473/v1484790087/wander03_vs5vxa.jpg"
+            onClick={this.handleLogo}/>
+        </div>
         <nav className="header-right">
           <button className="nav-button" onClick={this.handleJourneys}>Journeys</button>
           <button className="nav-button" onClick={this.handleBecomeAHost}>Become a Host</button>
           <button className="nav-button" onClick={this.props.logout}>Log Out</button>
         </nav>
+      </div>
+
     );
   }
   render () {
     return(
-        this.props.currentUser ? this.loggedInButtons() : this.loggedOutButtons()
-
+      this.props.currentUser ? this.loggedInButtons() : this.loggedOutButtons()
     );
   }
 }

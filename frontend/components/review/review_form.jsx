@@ -23,7 +23,6 @@ class ReviewForm extends React.Component {
     e.preventDefault();
     const review = Object.assign({}, this.state);
     this.props.createReview(review);
-    console.log(review);
   }
 
   render () {
@@ -56,11 +55,11 @@ class ReviewForm extends React.Component {
                   value="5" onChange={this.update("rating")}/>
               </label>
             </div>
-          <input
+          <textarea
             type="text"
             value={this.state.body}
             onChange={this.update("body")}
-            className="review-input"/>
+            className="review-input"></textarea>
           <input
             className="review-form-button"
             type="submit"
