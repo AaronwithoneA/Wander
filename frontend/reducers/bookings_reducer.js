@@ -9,6 +9,10 @@ const bookingsReducer = (state = {}, action) => {
       return action.bookings;
     case RECEIVE_SINGLE_BOOKING:
       return merge({}, state, action.booking);
+    case REMOVE_BOOKING:
+      let newState = merge({}, state);
+      delete newState[action.booking];
+      return newState;
     default:
       return state;
   }

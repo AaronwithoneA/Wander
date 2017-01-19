@@ -30,9 +30,6 @@ Phase 4: Dwelling Search (2 days)
 
   Objective: A search bar that can search dwellings by city, dates, and price, as well as a dwelling search result page with infinite scrolling.
 
-Phase 5: Google Maps functionality on search and Dwelling pages (2 days)
-
-  Objective: Utilize Google Maps API to map dwellings and update search results based on location range.
 
 Bonus Features (TBD)
   -Messaging
