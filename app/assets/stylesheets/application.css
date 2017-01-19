@@ -149,6 +149,10 @@
   outline: none;
 }
 
+.form-button:hover {
+  border: 2px solid #363946;
+}
+
 .redirect-button {
   margin: 30px 0px auto 0px;
   height: 35px;
@@ -162,6 +166,10 @@
   border-radius: 4px;
   font-family: inherit;
   outline: none;
+}
+
+.redirect-button:hover {
+  opacity: .5;
 }
 
 .redirect-statement {
@@ -819,7 +827,3 @@
   font-weight: bold;
   margin-right: 10px;
 }
-
-/*.dwelling-index-location {
-
-}*/
