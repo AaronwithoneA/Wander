@@ -12,7 +12,7 @@ class Reviews extends React.Component {
         {this.props.dwelling.reviews.map((review, idx)=> (
           <li key={idx} className="extra-dwelling-section">
             <div className="review-user-info">
-              Hagrid
+              Harry
             </div>
             <div className="extra-dwelling-section-content">
               {review.body}

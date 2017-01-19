@@ -84,9 +84,9 @@
 }
 
 .login-form-container {
-  margin: 0 auto 0 auto;
-  padding: 25px;
-  height: 540px;
+  margin: 0 auto 20px auto;
+  padding: 25px 25px 25px 25px;
+  height: 560px;
   width: 450px;
   position: fixed;
   bottom: 20%;
@@ -104,7 +104,6 @@
   font-family: "Magorian Regular",Georgia,Times,"Times New Roman",serif;
   outline: none;
   z-index: 99;
-  transform: scale(1.1);
 }
 
 .login-input {
@@ -130,6 +129,7 @@
   display: flex;
   justify-content: flex-start;
   font-size: 16px;
+  list-style: none;
 }
 
 .profile-photo-button {
@@ -219,7 +219,7 @@
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -20px;
+  background-position-y: -70px;
 }
 
 .dwelling-image-container {
