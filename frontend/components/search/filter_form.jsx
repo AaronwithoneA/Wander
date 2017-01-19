@@ -11,6 +11,9 @@ class FilterForm extends React.Component {
    };
  }
 
+componentDidMount() {
+  this.props.updateFilter("maxPrice", this.state.maxPrice);
+}
  handleChange (value) {
   //  return e => {
      this.setState({maxPrice: value});
