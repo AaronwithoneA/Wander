@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
+import Home from '../home/home';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -96,37 +97,43 @@ class SessionForm extends React.Component {
 
   render() {
 		return (
-			<div className="login-form-container">
-				<form onSubmit={this.handleSubmit} className="login-form-box">
-          <div className= "title">
-            Wander
-          </div>
-          <br />
-					<div className="login-signup-statement">Please {this.props.formType}</div>
-          <div className="errors">
-            {this.renderErrors()}
-          </div>
-					<div className="login-form">
-						<label>
-							<input type="text"
-								value={this.state.email}
-                placeholder="Email"
-								onChange={this.update("email")}
-								className="login-input" />
-						</label>
-						<label>
-							<input type="password"
-								value={this.state.password}
-                placeholder="Password"
-								onChange={this.update("password")}
-								className="login-input" />
-						</label>
-						<input className="form-button" type="submit" value="Alohomora!" />
-					</div>
-          <button className ="form-button" onClick={this.handleGuest}>Demo</button>
-          {this.navLink()}
-				</form>
-			</div>
+      <div>
+        <div className="login-background"></div>
+  			<div className="login-form-container">
+  				<form onSubmit={this.handleSubmit} className="login-form-box">
+
+              <img
+                className="form-logo"
+                src="https://res.cloudinary.com/dg8v2pvxf/image/upload/c_crop,h_1473/v1484790087/wander03_vs5vxa.jpg"
+                />
+
+              <br />
+            <div className="errors">
+              {this.renderErrors()}
+            </div>
+  					<div className="login-form">
+  						<label>
+  							<input type="text"
+  								value={this.state.email}
+                  placeholder="Email"
+  								onChange={this.update("email")}
+  								className="login-input" />
+  						</label>
+  						<label>
+  							<input type="password"
+  								value={this.state.password}
+                  placeholder="Password"
+  								onChange={this.update("password")}
+  								className="login-input" />
+  						</label>
+  						<input className="form-button" type="submit" value="Alohomora!" />
+  					</div>
+            <button className ="form-button" onClick={this.handleGuest}>Demo</button>
+            {this.navLink()}
+  				</form>
+  			</div>
+        <Home />
+      </div>
 		);
 	}
 
