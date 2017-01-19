@@ -8,13 +8,15 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {
         email: "",
-        password: ""
+        password: "",
+        image_url: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleGuest = this.handleGuest.bind(this);
     this.clearErrors = this.clearErrors.bind(this);
     this.handleSignUpButton = this.handleSignUpButton.bind(this);
     this.handleLoginButton = this.handleLoginButton.bind(this);
+    this.handlePhoto = this.handlePhoto.bind(this);
   }
 
   componentDidUpdate() {
@@ -95,6 +97,23 @@ class SessionForm extends React.Component {
     );
   }
 
+  handlePhoto(e) {
+    e.preventDefault();
+    cloudinary.openUploadWidget(
+      {
+        cloud_name: 'dg8v2pvxf',
+        upload_preset: 'iqrrljqa',
+        theme: 'minimal'
+      },
+      (errors, coverInfo) => {
+        if (errors === null) {
+          let cover_info = coverInfo[0].url;
+          this.setState({image_url: cover_info});
+        }
+      }
+    );
+  }
+
   render() {
 		return (
       <div>
@@ -126,13 +145,17 @@ class SessionForm extends React.Component {
   								onChange={this.update("password")}
   								className="login-input" />
   						</label>
+              <button className="profile-photo-button"onClick={this.handlePhoto}>Upload profile photo</button>
   						<input className="form-button" type="submit" value="Alohomora!" />
   					</div>
             <button className ="form-button" onClick={this.handleGuest}>Demo</button>
             {this.navLink()}
   				</form>
   			</div>
-        <Home />
+        <div className="home-container">
+          <Home />
+        </div>
+
       </div>
 		);
 	}
