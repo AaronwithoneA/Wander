@@ -7,7 +7,6 @@ const dwellingsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_ALL_DWELLINGS:
-    console.log(action);
       return action.dwellings;
     case RECEIVE_SINGLE_DWELLING:
       return merge({}, state, action.dwelling);

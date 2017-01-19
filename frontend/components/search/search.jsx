@@ -11,12 +11,13 @@ class Search extends React.Component {
       <div className="dwelling-index-page">
         <div className="search-box">
           <FilterForm
+            fetchSearchLocations={this.props.fetchSearchLocations}
             minPrice={this.props.minPrice}
             maxPrice={this.props.maxPrice}
             updateFilter={this.props.updateFilter} />
         </div>
-        <div >
-          <DwellingIndex className="dwelling-index-container" dwellings={this.props.dwellings} />
+        <div>
+          <DwellingIndex dwellings={this.props.dwellings} />
         </div>
       </div>
     );

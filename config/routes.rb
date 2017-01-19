@@ -54,6 +54,7 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   namespace :api, defaults: {format: :json} do
+    get 'search/locations', to: 'dwellings#search'
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy, :show]
     resources :dwellings, only: [:create, :destroy, :show, :index]

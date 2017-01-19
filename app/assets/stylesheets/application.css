@@ -211,7 +211,7 @@
 
 .home-image {
   background: url(https://s-media-cache-ak0.pinimg.com/originals/86/13/e3/8613e3e693717bab025e6313ca1a8875.jpg) no-repeat center center ;
-  width: 100%;
+  width: 100vw;
   height: 560px;
   display: flex;
   object-fit: cover;
@@ -220,6 +220,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -70px;
+
 }
 
 .dwelling-image-container {
@@ -249,7 +250,7 @@
 .dwelling-details {
   display: flex;
   flex-direction: column;
-  width: 65%;
+  width: 70%;
   min-width: 600px;
   justify-content: center;
   flex-wrap: wrap;
@@ -590,17 +591,45 @@
 }
 
 .booking-form-container {
-  width: 35%;
+  width: 28%;
   display: flex;
   justify-content: flex-start;
-  min-width: 300px;
+  min-width: 600px;
+  position: relative;
+  top: -50px;
+  font-family: "Magorian Regular",Georgia,Times,"Times New Roman",serif;
+  color: #1e1b15;
 }
 
 .booking-form-box {
-  width: 50%;
-  height: 375px;
-  padding: 0 25px;
-  border: 1px solid grey;
+  width: 58%;
+  height: 420px;
+  border: 1px solid lightgrey;
+  z-index: 9999999999999999;
+}
+
+.booking-form-top {
+  font-size: 22px;
+  color: lightgrey;
+  font-family: inherit;
+  display: flex;
+  justify-content: space-between;
+  background: #1e1b15;
+  width: 100%;
+  height: 50px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
+.price-statement {
+  display: flex;
+  align-items: center;
+}
+
+.per-night-statement {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
 }
 
 .booking-form {
@@ -609,6 +638,8 @@
   align-items: flex-start;
   justify-content: space-around;
   height: 360px;
+  font-family: inherit;
+  padding: 0 25px 25px 25px;
 }
 
 .booking-form-dates {
@@ -619,6 +650,7 @@
   justify-content: space-between;
   height: 110px;
   width: 100%;
+  font-family: inherit;
 }
 
 .booking-date-box {
@@ -627,21 +659,25 @@
   justify-content: space-around;
   height: 100%;
   width: 50%;
+  font-family: inherit;
 }
 
 .booking-date-input {
   width: 100%;
   height: 30px;
   outline: none;
+  font-family: inherit;
 }
 
 .booking-guest-box {
   width: 100%;
+  font-family: inherit;
 }
 .booking-guest-input {
   height: 30px;
   width: 100%;
   outline: none;
+  font-family: inherit;
 }
 
 .booking-fees {
@@ -650,6 +686,7 @@
   justify-content: space-between;
   width: 100%;
   border-bottom: 1px solid lightgrey;
+  font-family: inherit;
 }
 
 .booking-form-button-container {
@@ -661,7 +698,7 @@
 .booking-form-button {
   width: 80%;
   height: 50px;
-  margin-bottom: 20px;;
+  margin: 20px 0;
   background: #eeba30;
   border-radius: 4px;
   color: black;
@@ -696,13 +733,24 @@
   list-style: none;
   display: flex;
   flex-direction: column;
+  box-shadow: 3px 3px 10px 5px #000;
+}
+
+.booking-box:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .booking-image {
   height: 35%;
   width: 100%;
+  /*filter: blur(2px);*/
+/*-webkit-filter: blur(2px);*/
 }
 
+.booking-image:hover {
+  z-index: 999;
+}
 .booking-info {
   display: flex;
   flex-direction: column;

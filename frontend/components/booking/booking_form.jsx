@@ -59,6 +59,14 @@ total() {
     return (
       <div className="booking-form-container" >
         <div className="booking-form-box">
+          <div className="booking-form-top">
+            <div className="price-statement">
+              <div>${this.props.dwelling.price}</div>
+            </div>
+            <div className="per-night-statement">
+              <div>Per Night</div>
+            </div>
+          </div>
           <form onSubmit={this.handleSubmit} className="booking-form">
             <div className="booking-form-dates">
               <div className="booking-date-box" >

@@ -13,14 +13,12 @@ class DwellingIndexItem extends React.Component {
     hashHistory.push(`/dwellings/${this.props.dwelling.id}`);
   }
 
-
   render () {
     return (
-      <li className="dwelling-box">
+      <li className="dwelling-box"onClick={this.imageLink}>
         <img
           className="dwelling-index-image"
-          src={this.props.dwelling.image_url}
-          onClick={this.imageLink}/>
+          src={this.props.dwelling.image_url}/>
         <div className="dwelling-index-info">
           <div className="dwelling-index-price-location-box">
             <div className="dwelling-index-price">${this.props.dwelling.price}</div>

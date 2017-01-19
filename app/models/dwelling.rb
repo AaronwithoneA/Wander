@@ -40,4 +40,15 @@ class Dwelling < ActiveRecord::Base
     rating = 0
     self.reviews.average(:rating).to_i
   end
+
+  def self.locations
+    Dwelling.select(:location).pluck(:location).uniq
+  end
+
+  def self.find_by_letters(letters)
+    Dwelling.select(:location)
+      .where("location ~ ?", letters)
+      .pluck(:location)
+      .uniq
+  end
 end

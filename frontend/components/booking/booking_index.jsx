@@ -1,12 +1,19 @@
 import React from 'react';
+import {hashHistory} from 'react-router';
 
 class BookingIndex extends React.Component {
 
   componentDidMount () {
     this.props.fetchBookings();
+    this.imageLink = this.imageLink.bind(this);
   }
 
-
+  imageLink (url) {
+    return e => {
+    e.preventDefault;
+    hashHistory.push(url);
+  };
+  }
   // formatDate (d) {
   //   return (
   //     d.getDate()  + "-" + (d.getMonth()+1) + "-" + d.getFullYear() + " " +
@@ -15,12 +22,16 @@ class BookingIndex extends React.Component {
   // }
 
   render () {
-    debugger
     const bookings =  <div>
                         <ul className="booking-index-container">
+
                         {this.props.bookings.map((booking, idx) =>(
-                          <li className="booking-box" key={idx}>
-                            <img className="booking-image"src={booking.dwellingImage}></img>
+                          <li className="booking-box"
+                            key={idx}
+                            onClick={this.imageLink(`/dwellings/${booking.dwelling_id}`)}>
+                            <img
+                              className="booking-image"
+                              src={booking.dwellingImage}></img>
                             <div className="booking-info">
                               <div className="booking-location">
                                 {booking.dwellingLocation}

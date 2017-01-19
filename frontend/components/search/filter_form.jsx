@@ -5,21 +5,42 @@ class FilterForm extends React.Component {
 
  constructor(props) {
    super(props);
-   this.handleChange = this.handleChange.bind(this);
    this.state ={
-     maxPrice: 150
+     maxPrice: 150,
+     city: ""
    };
+   this.handlePriceChange = this.handlePriceChange.bind(this);
+   this.update = this.update.bind(this);
  }
 
 componentDidMount() {
   this.props.updateFilter("maxPrice", this.state.maxPrice);
+  this.props.fetchSearchLocations("");
 }
- handleChange (value) {
+ handlePriceChange (value) {
   //  return e => {
      this.setState({maxPrice: value});
      this.props.updateFilter("maxPrice", this.state.maxPrice);
   //  } ;
  }
+
+ update (field) {
+   return e => {
+     this.setState({
+       [field]: e.currentTarget.value
+     });
+     this.props.updateFilter("letters", e.currentTarget.value);
+    };
+  }
+
+  componentWillReceiveProps () {
+
+  }
+ // handleLocationChange (value) {
+ //   this.setState({city: value});
+ //   this.props.fetchSearchLocations(value);
+ // }
+
 
   render () {
     return(
@@ -35,10 +56,12 @@ componentDidMount() {
                 orientation={"horizontal"}
                 value={this.state.maxPrice}
                 className="rangeslider-horizontal"
-                onChange={this.handleChange}/>
+                onChange={this.handlePriceChange}/>
               <div className="slider-status">{this.state.maxPrice}</div>
             </div>
           </div>
+          <input type="text" placeholder="Search"
+            onChange={this.update("city")} value={this.state.city}/>
         </div>
       </div>
     );

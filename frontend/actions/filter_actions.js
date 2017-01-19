@@ -1,4 +1,5 @@
 import {fetchSearchDwellings} from '../actions/dwelling_actions';
+import {fetchSearchLocations} from '../actions/search_actions';
 
 // export const CHANGE_BOUNDS = "CHANGE_BOUNDS";
 // export const CHANGE_PRICE = "CHANGE_PRICE";
