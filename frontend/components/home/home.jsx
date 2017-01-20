@@ -6,7 +6,7 @@ const Home = (props) => {
     <div className= "home-content">
 
       <div className="home-image">
-        <h1 className="title-text"></h1>
+        <h1 className="home-header">Wander the Wizarding World...</h1>
       </div>
       <div>
         <SearchContainer />

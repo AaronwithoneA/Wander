@@ -46,6 +46,13 @@ componentDidMount() {
     return(
       <div className="filter-container">
         <div className="filter">
+          <div className="location-filter-box">
+            <div className="filter-label">Where</div>
+            <input type="text"
+              onChange={this.update("city")}
+              value={this.state.city}
+              className="location-filter"/>
+          </div>
           <div className="price-filter-box">
             <h3 className="filter-label">Maximum Price</h3>
             <div className="slider-box">
@@ -60,8 +67,6 @@ componentDidMount() {
               <div className="slider-status">{this.state.maxPrice}</div>
             </div>
           </div>
-          <input type="text" placeholder="Search"
-            onChange={this.update("city")} value={this.state.city}/>
         </div>
       </div>
     );

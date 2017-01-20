@@ -220,7 +220,16 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -70px;
+}
 
+.home-header {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.6px;
+  color: white;
+  padding: 85px 0 0 70px;
+  font-family: "Magorian Regular",Georgia,Times,"Times New Roman",serif;
 }
 
 .dwelling-image-container {
@@ -734,6 +743,7 @@
   display: flex;
   flex-direction: column;
   box-shadow: 3px 3px 10px 5px #000;
+  border: 1px solid grey;
 }
 
 .booking-box:hover {
@@ -789,17 +799,6 @@
   width: 500px;
 }
 
-.dwelling-index-container {
-  display: flex;
-  justify-content: center;
-  padding: 50px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  font-family: "Magorian Regular",Georgia,Times,"Times New Roman",serif;
-  color: #1e1b15;
-
-}
-
 .filter-container {
   font-family: "Magorian Regular",Georgia,Times,"Times New Roman",serif;
   width: 100%;
@@ -809,29 +808,52 @@
 
 .filter {
   width: 80%;
-  padding: 20px;
   margin: 10px;
   border: 2px solid lightgrey;
   display: flex;
   justify-content: space-around;
 }
 
-.price-filter-box {
-  width: 70%;
+.filter-label {
+  width: 90%;
+  text-align: left;
+  margin: 0 20px 0 20px;
+  font-size: 16px;
+  font-family: inherit;
+}
+.location-filter-box {
+  width: 50%;
+  border-right: 1px solid lightgrey;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.location-filter {
+  width:90%;
+  height: 40px;
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin: 0 20px 0 20px;
+}
+
+.price-filter-box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
 }
 
 .slider-box {
   width: 300px;
-  margin: none;
-}
+    margin: 0 20px 0 20px;
 
-.filter-label {
-  font-size: 16px;
-  font-family: inherit;
 }
 
 .slider-status {
@@ -839,15 +861,28 @@
   font-family: inherit;
 }
 
+.dwelling-index-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: "Magorian Regular",Georgia,Times,"Times New Roman",serif;
+  color: #1e1b15;
+}
+
 .dwelling-box {
   height: 280px;
-  width: 350px;
-  min-width: 350px;
+  width: 375px;
+  min-width: 375px;
   box-sizing: border-box;
-  margin: 20px;
   list-style: none;
   display: flex;
+  margin: 10px;
   flex-direction: column;
+  border: 1px solid grey;
+  box-shadow: 3px 3px 10px 5px #000;
+  transform: scale(.9);
 }
 
 .dwelling-index-image {
@@ -855,22 +890,25 @@
   width: 100%;
 }
 
-.dwelling-index-image:hover {
-  opacity: .7;
+.dwelling-box:hover {
+  /*opacity: .7;*/
+  transform: scale(.95);
+  cursor: pointer;
 }
 
 .dwelling-index-info {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
-  margin-top: 5px;
+  padding: 10px;
 }
 
 .dwelling-index-price-location-box {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  padding: 0 10px;
 }
 
 .dwelling-index-price {
