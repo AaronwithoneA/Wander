@@ -15,7 +15,7 @@ The dwelling component renders all information about the dwelling and reviews.
 
 ####Dwelling Component
 
-![image of dwelling](app/assets/images/dwelling_component)
+![image of dwelling](app/assets/images/dwelling_component.png)
 
 ###Dwelling search
 
