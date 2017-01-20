@@ -11,6 +11,7 @@ import DwellingMap from './search/dwelling_map';
 import SearchContainer from './search/search_container';
 
 
+
 const Root = ({ store }) => {
 
 
@@ -38,7 +39,6 @@ const Root = ({ store }) => {
           <Route path="/dwelling-form" component={ DwellingFormContainer } onEnter={_ensureLoggedIn}/>
           <Route path="/dwellings/:dwellingId" component={ DwellingContainer } />
           <Route path="/bookings" component={ BookingIndexContainer } onEnter={_ensureLoggedIn}/>
-          <Route path="/map" component={ DwellingMap } />
           <Route path="/search" component={ SearchContainer } />
         </Route>
       </Router>

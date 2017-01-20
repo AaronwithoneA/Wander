@@ -1,4 +1,4 @@
-import {createBooking, fetchBookings} from '../../actions/booking_actions';
+import {createBooking, fetchBookings, deleteBooking} from '../../actions/booking_actions';
 import {connect} from 'react-redux';
 import BookingIndex from './booking_index';
 import {selectBookings} from '../../reducers/selectors';
@@ -10,6 +10,7 @@ const mapStateToProps= state => ({
 
 const mapDispatchToProps = dispatch => ({
   createBooking: booking => dispatch(createBooking(booking)),
+  deleteBooking: id => dispatch(deleteBooking(id)),
   fetchBookings: () => dispatch(fetchBookings())
 });
 

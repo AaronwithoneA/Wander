@@ -16,10 +16,9 @@ class Api::BookingsController < ApplicationController
   end
 
   def destroy
-    @booking = booking.find(params[:id])
+    @booking = Booking.find(params[:id])
     if @booking
       @booking.destroy
-      render 'api/bookings/index'
     else
       render json: @booking.errors.full_messages, status: 422
     end

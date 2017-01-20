@@ -6,13 +6,23 @@ class BookingIndex extends React.Component {
   componentDidMount () {
     this.props.fetchBookings();
     this.imageLink = this.imageLink.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   imageLink (url) {
     return e => {
-    e.preventDefault;
-    hashHistory.push(url);
-  };
+      e.preventDefault;
+      hashHistory.push(url);
+    };
+  }
+
+  handleDelete (id) {
+    return e => {
+      e.preventDefault;
+      this.props.deleteBooking(id);
+      this.props.fetchBookings();
+      // hashHistory.push('/bookings2');
+    };
   }
   // formatDate (d) {
   //   return (
@@ -27,11 +37,11 @@ class BookingIndex extends React.Component {
 
                         {this.props.bookings.map((booking, idx) =>(
                           <li className="booking-box"
-                            key={idx}
-                            onClick={this.imageLink(`/dwellings/${booking.dwelling_id}`)}>
+                            key={idx}>
                             <img
                               className="booking-image"
-                              src={booking.dwellingImage}></img>
+                              src={booking.dwellingImage}
+                              onClick={this.imageLink(`/dwellings/${booking.dwelling_id}`)}></img>
                             <div className="booking-info">
                               <div className="booking-location">
                                 {booking.dwellingLocation}
@@ -45,6 +55,9 @@ class BookingIndex extends React.Component {
                               <h4 className="booking-title">
                                 {booking.dwellingTitle}
                               </h4>
+                              <button
+                                onClick={this.handleDelete(booking.id)}
+                                className="delete-booking-button">Cancel Booking</button>
                             </div>
                           </li>
                         ))}

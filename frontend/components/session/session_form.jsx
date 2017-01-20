@@ -42,7 +42,7 @@ class SessionForm extends React.Component {
   handleGuest(e) {
     e.preventDefault();
     const user = {
-        email: "harry",
+        email: "RubeusHagrid@hogwarts.com",
         password: "1234567"
       };
     this.props.login(user);
@@ -147,7 +147,6 @@ class SessionForm extends React.Component {
   								onChange={this.update("password")}
   								className="login-input" />
   						</label>
-              <button className="profile-photo-button"onClick={this.handlePhoto}>Upload profile photo</button>
   						<input className="form-button" type="submit" value="Alohomora!" />
   					</div>
             <button className ="form-button" onClick={this.handleGuest}>Demo</button>
