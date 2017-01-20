@@ -473,7 +473,7 @@
   height: 700px;
   display: flex;
   justify-content: flex-end;
-
+  background: url()
 }
 
 .dwelling-form-box {
@@ -717,6 +717,24 @@
   padding-bottom: 5px;
   font-family: inherit;
   outline: none;
+}
+.delete-booking-button {
+  width: 80%;
+  height: 50px;
+  margin: 20px 0;
+  background: #eeba30;
+  border-radius: 4px;
+  color: black;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5px;
+  font-family: inherit;
+  outline: none;
+}
+
+.delete-booking-button:hover {
+  border: 2px solid #363946;
 }
 
 .booking-form-button:hover {
