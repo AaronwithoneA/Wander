@@ -23,6 +23,7 @@ There is an active search bar on /home, one at /home that allows for search by m
 
 ####Search Component
 ![image of search](app/assets/images/search_component)
+<img src="app/assets/images/search_componentpng">
 
 ###Bookings
 
