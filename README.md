@@ -19,7 +19,7 @@ The dwelling component renders all information about the dwelling and reviews.
 
 ###Dwelling search
 
-There is an active search bar on /home, one at /home that allows for search by maximum price and location.  The dwellings will responsively match selected filter.
+There is an active search bar on /home that allows for search by maximum price and location.  The dwellings will responsively match selected filter.
 
 ####Search Component
 ![image of search](app/assets/images/search_component)
