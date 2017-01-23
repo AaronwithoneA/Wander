@@ -70,7 +70,20 @@ Dwelling.create(owner_id: 14,
    "Traveling through London? Stay overnight at our large home. Free use of well-stocked kitchen and dining area, choice of several available bedrooms. Please take no notice of Mrs. Black when you enter (she's harmless).",
   title: "Full house available to book while in London",
   house_rules: "Do not reveal this address to any muggles! Strong anti-muggle charms placed over this residence.")
-Dwelling.create()
+
+Dwelling.create(  owner_id: 26,
+  location: "Platform 9 3/4, Hogsmeade Station",
+  price: 100,
+  image_url: "http://res.cloudinary.com/dg8v2pvxf/image/upload/v1485159538/nfzmkrpivo0mtmoh3ode.jpg",
+  description: "Shared",
+  guest_limit: 2,
+  bedrooms: 1,
+  beds: 1,
+  about_this:
+   "Spend a luxurious night aboard the Hogwarts Express.  Meet at platform 9 3/4  at 11:00 AM.  If you don't know how to get there, you don't belong.  Please do not spread this listing to muggles.  ",
+  title: "All aboard the Hogwarts Express!!",
+  house_rules:
+   "Please respect that this is primarily a means of transportation for little witches and wizards.  Appropriate language and spells are much appreciated.  ")
 User.create(  email: "harry",
   password: "1234567",
   session_token: "OGabyBskSAueGYFqQlZV1A==",

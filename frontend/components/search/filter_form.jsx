@@ -6,7 +6,7 @@ class FilterForm extends React.Component {
  constructor(props) {
    super(props);
    this.state ={
-     maxPrice: 150,
+     maxPrice: 500,
      city: ""
    };
    this.handlePriceChange = this.handlePriceChange.bind(this);
