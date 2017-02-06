@@ -51,6 +51,7 @@ componentDidMount() {
             <input type="text"
               onChange={this.update("city")}
               value={this.state.city}
+              placeholder="Hogwarts School of Witchcraft and Wizardry"
               className="location-filter"/>
           </div>
           <div className="price-filter-box">
@@ -64,7 +65,7 @@ componentDidMount() {
                 value={this.state.maxPrice}
                 className="rangeslider-horizontal"
                 onChange={this.handlePriceChange}/>
-              <div className="slider-status">{this.state.maxPrice}</div>
+              <div className="slider-status">${this.state.maxPrice}</div>
             </div>
           </div>
         </div>

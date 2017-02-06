@@ -430,10 +430,34 @@
   font-family: inherit;
 }
 
+.rating-title {
+margin-right: 10px;
+}
+
 .review-rating {
   font-family: inherit;
   outline: none;
+  margin-right: 10px;
+  background: url('http://res.cloudinary.com/dg8v2pvxf/image/upload/v1484359474/star-icon_cqaeqo.png');
 }
+
+.unclicked-star {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.clicked-star {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  box-shadow: 1px 1px 2px 1px #000;
+}
+
+.unclicked-star:hover {
+  opacity: .5
+}
+
 
 .review-input {
   width: 75%;
@@ -856,6 +880,9 @@
   border-left: none;
   border-right: none;
   margin: 0 20px 0 20px;
+  color: black;
+  font-size: 16px;
+  outline: none;
 }
 
 .price-filter-box {
@@ -868,7 +895,7 @@
 }
 
 .slider-box {
-  width: 300px;
+  width: 90%;
     margin: 0 20px 0 20px;
 
 }

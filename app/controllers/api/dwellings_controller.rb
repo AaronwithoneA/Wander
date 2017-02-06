@@ -15,8 +15,7 @@ class Api::DwellingsController < ApplicationController
 
   def index
     dwellings = Dwelling.where("price < ?", filter_params[:maxPrice])
-    @dwellings = dwellings.where("location LIKE ?", "%#{filter_params[:letters]}%")
-    # where(["title LIKE ?", "%#{params[:query]}%"])
+    @dwellings = dwellings.where("location LIKE ?", "#{filter_params[:letters]}%")
 
   end
 
