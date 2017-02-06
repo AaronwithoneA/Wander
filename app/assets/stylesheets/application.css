@@ -305,6 +305,12 @@
   flex-direction: row;
   margin: 8px 0;
   color: grey;
+  font-size: 18px;
+}
+
+.ratings {
+  margin: 1px 0 0 30px;
+
 }
 
 .types {
