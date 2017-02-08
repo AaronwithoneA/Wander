@@ -7,9 +7,11 @@ import {fetchReviews, createReview} from '../../actions/review_actions';
 const mapStateToProps = (state, {params}) => {
   const dwellingId = parseInt(params.dwellingId);
   const dwelling = selectDwelling(state, dwellingId);
+  const owner = dwelling.owner;
   return {
     dwellingId,
     dwelling,
+    owner
   };
 };
 

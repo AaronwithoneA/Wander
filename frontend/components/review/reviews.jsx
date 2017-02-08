@@ -12,8 +12,8 @@ class Reviews extends React.Component {
         {this.props.dwelling.reviews.map((review, idx)=> (
           <li key={idx} className="extra-dwelling-section">
             <div className="review-user-info">
-              {review.guest.fname}
-             <img src={review.guest.image_url} />
+             <img className ="review-image"src={review.guest.image_url} />
+             <div>{review.guest.fname}</div>
             </div>
             <div className="extra-dwelling-section-content">
               <div>{review.body}</div>

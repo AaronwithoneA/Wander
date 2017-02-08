@@ -66,6 +66,7 @@ class Header extends React.Component {
           <button className="nav-button" onClick={this.handleJourneys}>Journeys</button>
           <button className="nav-button" onClick={this.handleBecomeAHost}>Become a Host</button>
           <button className="nav-button" onClick={this.props.logout}>Log Out</button>
+          <img className='nav-bar-photo' src={this.props.currentUser.image_url}/>
         </nav>
       </div>
 

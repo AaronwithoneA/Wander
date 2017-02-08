@@ -20,12 +20,20 @@ class Dwelling extends React.Component {
     return stars;
   }
 
-  componentDidMount () {
+  componentWillMount () {
     this.props.fetchDwelling(this.props.dwellingId);
   }
 
   render () {
     const reviews = this.props.dwelling.reviews ? <ReviewsContainer dwelling={this.props.dwelling}/> : "";
+    const owner = this.props.owner ?  <div className="top-host-info">
+                                        <div className="host-thumbnail-box">
+                                         <img  className ="host-thumbnail"src={this.props.owner.image_url}/>
+                                        </div>
+                                        <div className="host-name">
+                                          {this.props.owner.fname}
+                                        </div>
+                                     </div> : "";
     return (
       <div className="dwelling-page">
         <div className="dwelling-image-container">
@@ -35,14 +43,7 @@ class Dwelling extends React.Component {
           <div className="dwelling-details">
             <div className="dwelling-details-info">
               <div className="top-info">
-                <div className="top-host-info">
-                  <div className="host-thumbnail">
-                    <img src={this.props.dwelling.owner.image_url}/>
-                  </div>
-                  <div>
-                    {this.props.dwelling.owner_name}
-                  </div>
-                </div>
+                {owner}
                 <div className="top-dwelling-info">
                   <div className="dwelling-title">
                     {this.props.dwelling.title}

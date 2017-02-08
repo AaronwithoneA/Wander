@@ -1,5 +1,5 @@
 json.set! @dwelling.id do
-  json.extract! @dwelling, :id, :owner,  :location, :lat, :long, :price,
+  json.extract! @dwelling, :id, :owner, :location, :lat, :long, :price,
     :image_url, :about_this, :type, :title, :check_in, :check_out,
     :house_rules, :guest_limit, :bedrooms, :beds, :featured, :description, :rating
   json.reviews do
@@ -9,11 +9,6 @@ json.set! @dwelling.id do
       json.guestImage review.guest.image_url
       json.month review.convert_month
       json.year review.convert_year
-
     end
-
   end
-  # json.owner_image @dwelling.owner.image_url
-  # json.owner_name @dwelling.owner.fname
-
 end
