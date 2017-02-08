@@ -1,3 +1,3 @@
-json.extract! @review, :id, :body, :rating, :dwelling_id
-# json.guestName @review.guest.fname
-# json.guestImage @review.guest.image_url
+json.extract! @review, :id, :body, :rating, :created_at, :dwelling_id, :guest
+json.date @review.convert_month
+json.date @review.convert_year

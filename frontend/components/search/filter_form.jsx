@@ -55,7 +55,10 @@ componentDidMount() {
               className="location-filter"/>
           </div>
           <div className="price-filter-box">
-            <h3 className="filter-label">Maximum Price</h3>
+            <div className="price-filter-labels">
+              <h3 className="filter-label">Maximum Price</h3>
+              <div className="slider-status">${this.state.maxPrice}</div>
+            </div>
             <div className="slider-box">
               <Slider
                 min={30}
@@ -65,7 +68,6 @@ componentDidMount() {
                 value={this.state.maxPrice}
                 className="rangeslider-horizontal"
                 onChange={this.handlePriceChange}/>
-              <div className="slider-status">${this.state.maxPrice}</div>
             </div>
           </div>
         </div>

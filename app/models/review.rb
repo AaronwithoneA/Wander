@@ -19,4 +19,12 @@ class Review < ActiveRecord::Base
   class_name: :User
 
   belongs_to :dwelling
+
+  def convert_month
+    self.created_at.strftime("%B")
+  end
+
+  def convert_year
+    self.created_at.strftime("%Y")
+  end
 end

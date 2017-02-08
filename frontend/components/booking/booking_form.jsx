@@ -70,16 +70,19 @@ total() {
           <form onSubmit={this.handleSubmit} className="booking-form">
             <div className="booking-form-dates">
               <div className="booking-date-box" >
-                <h3>Check-in</h3>
+                <div>
+                  <h3>Check-in</h3>
                   <input
                     type="date"
                     placeholder="mm/dd/yyyy"
                     value={this.state.start_date}
                     onChange={this.update("start_date")}
                     className="booking-date-input"/>
+                </div>
               </div>
               <div className="booking-date-box" >
-                <h3>Check-out</h3>
+                <div>
+                  <h3>Check-out</h3>
                   <input
                     type="date"
                     placeholder="mm/dd/yyyy"
@@ -87,6 +90,7 @@ total() {
                     min={this.state.start_date}
                     onChange={this.update("end_date")}
                     className="booking-date-input"/>
+                </div>
               </div>
             </div>
             <div className="booking-guest-box">

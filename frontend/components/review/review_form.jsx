@@ -21,10 +21,13 @@ class ReviewForm extends React.Component {
   }
 
   handleSubmit(e) {
-    console.log(this.state.rating);
     e.preventDefault();
     const review = Object.assign({}, this.state);
     this.props.createReview(review);
+    this.setState({
+      body: "",
+      rating: ""
+    });
   }
 
 

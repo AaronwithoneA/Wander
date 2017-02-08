@@ -17,7 +17,7 @@ class Dwelling extends React.Component {
         <img key={i} className="stars" src="http://res.cloudinary.com/dg8v2pvxf/image/upload/v1484359474/star-icon_cqaeqo.png"/>
       );
     }
-    return stars
+    return stars;
   }
 
   componentDidMount () {
@@ -37,7 +37,7 @@ class Dwelling extends React.Component {
               <div className="top-info">
                 <div className="top-host-info">
                   <div className="host-thumbnail">
-                    <img src="http://res.cloudinary.com/dg8v2pvxf/image/upload/v1484361641/harry_adsj4h.jpg"/>
+                    <img src={this.props.dwelling.owner.image_url}/>
                   </div>
                   <div>
                     {this.props.dwelling.owner_name}

@@ -53,7 +53,7 @@ class SessionForm extends React.Component {
     const user = Object.assign({}, this.state);
     console.log(user);
     this.props.processForm(user);
-
+   console.log(this.state)
   }
 
   handleSignUpButton(e) {
@@ -114,6 +114,7 @@ class SessionForm extends React.Component {
         }
       }
     );
+
   }
 
   render() {
@@ -149,6 +150,7 @@ class SessionForm extends React.Component {
   						</label>
   						<input className="form-button" type="submit" value="Alohomora!" />
   					</div>
+            <button className ="form-button" onClick={this.handlePhoto}>Photo</button>
             <button className ="form-button" onClick={this.handleGuest}>Demo</button>
             {this.navLink()}
   				</form>
