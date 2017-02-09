@@ -4,5 +4,6 @@
     json.dwellingTitle booking.dwelling.title
     json.dwellingLocation booking.dwelling.location
     json.dwellingImage booking.dwelling.image_url
+    json.ownerImage booking.dwelling.owner.image_url
   end
 end

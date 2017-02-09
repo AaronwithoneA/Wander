@@ -16,7 +16,22 @@ User.create(  email: "papalovegood@gmail.com",
   session_token: "OGabyBskSAueGYFqQlZV1A==",
   fname: "Xenophilius",
   image_url: "http://res.cloudinary.com/dg8v2pvxf/image/upload/v1486530694/o8bdk9oiwrf0ghrm8gwd.jpg" )
-
+User.create(  email: "destroyallmuggles@gmail.com",
+  password: "1234567",
+  fname: "Lucius",
+  image_url: "http://res.cloudinary.com/dg8v2pvxf/image/upload/v1486575925/gd1vhu5oyvisxd3wwudn.jpg" )
+User.create(  email: "fawks@gmail.com",
+  password: "1234567",
+  fname: "Albus",
+  image_url: "http://res.cloudinary.com/dg8v2pvxf/image/upload/v1486582464/od1mvwbejiunfhpnxcvt.jpg" )
+User.create(  email: "destroyallmuggles@gmail.com",
+  password: "1234567",
+  fname: "Lucius",
+  image_url: "http://res.cloudinary.com/dg8v2pvxf/image/upload/v1486575925/gd1vhu5oyvisxd3wwudn.jpg" )
+User.create(  email: "destroyallmuggles@gmail.com",
+  password: "1234567",
+  fname: "Lucius",
+  image_url: "http://res.cloudinary.com/dg8v2pvxf/image/upload/v1486575925/gd1vhu5oyvisxd3wwudn.jpg" )
 User.create(  email: "harry",
   password: "1234567",
   session_token: "OGabyBskSAueGYFqQlZV1A==",
@@ -37,7 +52,7 @@ User.create(  email: "RubeusHagrid@hogwarts.com",
      "Enjoy a lovely stay with us at our cottage! We have a cozy, warm room available for 1-2 guests to stay. I may even brew up some Gurdyroot Infusion for you! ",
     title: " Cozy room in cottage",
     house_rules: "Please mind the dirigibles in the front.")
-  Dwelling.create(owner_id: 14,
+  Dwelling.create(owner_id: User.second.id,
     location: "Canterbury",
     price: 800,
     image_url: "http://res.cloudinary.com/dg8v2pvxf/image/upload/v1484951628/e6lxfcyoflap1d2cxbkl.png",
@@ -85,7 +100,7 @@ User.create(  email: "RubeusHagrid@hogwarts.com",
     title: "Full house available to book while in London",
     house_rules: "Do not reveal this address to any muggles! Strong anti-muggle charms placed over this residence.")
 
-  Dwelling.create(  owner_id: 26,
+  Dwelling.create(  owner_id: User.third.id,
     location: "Platform 9 3/4, Hogsmeade Station",
     price: 100,
     image_url: "http://res.cloudinary.com/dg8v2pvxf/image/upload/v1485159538/nfzmkrpivo0mtmoh3ode.jpg",

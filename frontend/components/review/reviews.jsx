@@ -2,6 +2,17 @@ import React from 'react';
 
 class Reviews extends React.Component {
 
+
+  rating () {
+    const stars = [];
+    for (var i = 0; i < parseInt(review.rating); i++) {
+      stars.push(
+        <img key={i} className="stars" src="http://res.cloudinary.com/dg8v2pvxf/image/upload/v1484359474/star-icon_cqaeqo.png"/>
+      );
+    }
+    return stars;
+  }
+
   render () {
   return (
     <div className="reviews-box">
@@ -14,6 +25,7 @@ class Reviews extends React.Component {
             <div className="review-user-info">
              <img className ="review-image"src={review.guest.image_url} />
              <div>{review.guest.fname}</div>
+             {this.rating}
             </div>
             <div className="extra-dwelling-section-content">
               <div>{review.body}</div>

@@ -37,12 +37,17 @@ class BookingIndex extends React.Component {
 
                         {this.props.bookings.map((booking, idx) =>(
                           <li className="booking-box"
-                            key={idx}>
+                            key={idx}
+                             onClick={this.imageLink(`/dwellings/${booking.dwelling_id}`)}>
                             <img
                               className="booking-image"
                               src={booking.dwellingImage}
-                              onClick={this.imageLink(`/dwellings/${booking.dwelling_id}`)}></img>
+                              ></img>
                             <div className="booking-info">
+                              <div className="booking-host-image-box">
+                                <img className ="booking-host-image"
+                                src={booking.ownerImage}/>
+                              </div>
                               <div className="booking-location">
                                 {booking.dwellingLocation}
                               </div>

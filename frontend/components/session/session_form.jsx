@@ -42,7 +42,7 @@ class SessionForm extends React.Component {
   handleGuest(e) {
     e.preventDefault();
     const user = {
-        email: "RubeusHagrid@hogwarts.com",
+        email: "fawks@gmail.com",
         password: "1234567"
       };
     this.props.login(user);
@@ -53,7 +53,6 @@ class SessionForm extends React.Component {
     const user = Object.assign({}, this.state);
     console.log(user);
     this.props.processForm(user);
-   console.log(this.state)
   }
 
   handleSignUpButton(e) {
