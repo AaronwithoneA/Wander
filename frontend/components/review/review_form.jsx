@@ -28,6 +28,7 @@ class ReviewForm extends React.Component {
       body: "",
       rating: ""
     });
+    this.forceUpdate();
   }
 
 

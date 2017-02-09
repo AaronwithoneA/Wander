@@ -70,7 +70,7 @@ class DwellingForm extends React.Component {
             <input
               type="text"
               placeholder="Location"
-              value={this.state.location.toLowerCase()}
+              value={this.state.location}
               onChange={this.update("location")}
               className="dwelling-input-long"/>
               <input
