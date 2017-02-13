@@ -28,6 +28,11 @@ class Booking < ActiveRecord::Base
       errors[:end_date] << "must come after start date"
     end
 
+  def dates
+    "#{self.start_date.strftime("%B")} #{self.start_date.strftime("%e")}, #{self.start_date.strftime("%Y")} -
+    #{self.end_date.strftime("%B")} #{self.end_date.strftime("%e")}, #{self.end_date.strftime("%Y")}"
+  end
+
   # def dwelling_is_available
   #   return unless self.start_date && self.end_date
   #   unless self.spot.is_available?(self.start_date, self.end_date)

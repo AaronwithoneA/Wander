@@ -8,6 +8,7 @@ class ReviewForm extends React.Component {
     this.state = {
     body: "",
     rating: "",
+    error: "",
     dwelling_id: this.props.dwellingId
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,11 +24,23 @@ class ReviewForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const review = Object.assign({}, this.state);
+    console.log(this.state);
+    if (this.state.body === "") {
+      this.setState({
+        error: "Please submit a review"
+      });
+    } else if (this.state.rating === "") {
+        this.setState({
+          error: "Please submit a rating"
+        });
+    } else {
+        this.setState({
+          body: "",
+          rating: "",
+          error: ""
+        });
+      }
     this.props.createReview(review);
-    this.setState({
-      body: "",
-      rating: ""
-    });
     this.forceUpdate();
   }
 
@@ -45,7 +58,8 @@ class ReviewForm extends React.Component {
     return (
       <div className="review-form-container" >
         <form onSubmit={this.handleSubmit} className="review-form">
-          <div className="review-rating-box">
+          <div className="review-rating-and-errors">
+            <div className="review-rating-box">
               <img src='http://res.cloudinary.com/dg8v2pvxf/image/upload/v1484359474/star-icon_cqaeqo.png'
                             className={this.clickedStar(1)}
                             onClick={() => this.setState({rating: 1})}/>
@@ -62,6 +76,8 @@ class ReviewForm extends React.Component {
                           className={this.clickedStar(5)}
                           onClick={() => this.setState({rating: 5})}/>
             </div>
+            <div className="review-errors">{this.state.error}</div>
+          </div>
           <textarea
             type="text"
             value={this.state.body}

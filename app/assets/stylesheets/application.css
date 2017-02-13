@@ -505,15 +505,22 @@
   align-items: center;
 }
 
-.review-rating-box {
+.review-rating-and-errors {
+  display: flex;
+  justify-content: space-between;
   width: 75%;
+  margin: 20px 0;
+}
+
+.review-rating-box {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin: 20px 0;
-  font-family: inherit;
 }
 
+.review-errors {
+  font-family: "Magorian Regular",Georgia,Times,"Times New Roman",serif;
+}
 .rating-title {
 margin-right: 10px;
 }

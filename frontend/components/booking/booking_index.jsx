@@ -21,20 +21,12 @@ class BookingIndex extends React.Component {
       e.preventDefault;
       this.props.deleteBooking(id);
       this.props.fetchBookings();
-      // hashHistory.push('/bookings2');
     };
   }
-  // formatDate (d) {
-  //   return (
-  //     d.getDate()  + "-" + (d.getMonth()+1) + "-" + d.getFullYear() + " " +
-  //     d.getHours() + ":" + d.getMinutes()
-  //   );
-  // }
 
   render () {
     const bookings =  <div>
                         <ul className="booking-index-container">
-
                         {this.props.bookings.map((booking, idx) =>(
                           <li className="booking-box"
                             key={idx}
@@ -52,7 +44,7 @@ class BookingIndex extends React.Component {
                                 {booking.dwellingLocation}
                               </div>
                               <div className="booking-dates-guest">
-                                {booking.start_date} -- {booking.end_date.toString()}
+                                {booking.dates}
                               </div>
                               <div className="booking-dates-guest">
                                 {booking.guest_number} guests
@@ -68,9 +60,11 @@ class BookingIndex extends React.Component {
                         ))}
                         </ul>
                       </div>;
-    console.log(this.props);
+
     return (this.props.bookings ? bookings : <div></div>);
   }
 }
 
 export default BookingIndex;
+              //
+              // {booking.start_date} -- {booking.end_date.toString()}
