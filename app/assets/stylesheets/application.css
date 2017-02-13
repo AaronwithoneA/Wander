@@ -73,7 +73,7 @@
   border: none;
   outline: none;
   border: 1px solid transparent;
-  font-weight: bolder;
+  font-weight: bold;
   filter: contrast(2) brightness(1.5);
 }
 
