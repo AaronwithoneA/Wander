@@ -9,6 +9,7 @@ class BookingForm extends React.Component {
     start_date: "",
     end_date: "",
     guest_number: "",
+    error: "",
     dwelling_id: this.props.dwellingId
     };
 
@@ -27,8 +28,22 @@ class BookingForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const booking = Object.assign({}, this.state);
-    this.props.createBooking(booking);
-    hashHistory.push(`/bookings`);
+    if (this.state.start_date === "") {
+      this.setState({
+        error: "Please select a start date"
+      });
+    } else if (this.state.end_date === "") {
+        this.setState({
+          error: "Please select an end date"
+        });
+    } else if (this.state.guest_number === "") {
+        this.setState({
+          error: "Please select number of guests"
+        });
+    } else {
+      this.props.createBooking(booking);
+      hashHistory.push(`/bookings`);
+      }
   }
 
   days() {
@@ -118,8 +133,11 @@ total() {
                 className="booking-form-button"
                 type="submit"
                 value="wingardium leviosa!" />
+            {this.state.error}
             </div>
+
           </form>
+
         </div>
       </div>
     );

@@ -1,6 +1,8 @@
 class Api::DwellingsController < ApplicationController
   def create
     @dwelling = Dwelling.new(dwelling_params)
+    @dwelling.image_url != "" ||
+      @dwelling.image_url = "http://res.cloudinary.com/dg8v2pvxf/image/upload/v1487022726/maxresdefault_aesucc.jpg"
     @dwelling.owner_id = current_user.id
     if @dwelling.save
       render :show
@@ -15,7 +17,7 @@ class Api::DwellingsController < ApplicationController
 
   def index
     dwellings = Dwelling.where("price < ?", filter_params[:maxPrice])
-    @dwellings = dwellings.where("location LIKE ?", "#{filter_params[:letters]}%")
+    @dwellings = dwellings.where("location LIKE ?", "#{filter_params[:letters].capitalize}%")
 
   end
 

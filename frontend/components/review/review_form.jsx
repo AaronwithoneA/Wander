@@ -22,9 +22,11 @@ class ReviewForm extends React.Component {
   }
 
   handleSubmit(e) {
+    if (!this.props.currentUser) {
+      return hashHistory.push('/login');
+    }
     e.preventDefault();
     const review = Object.assign({}, this.state);
-    console.log(this.state);
     if (this.state.body === "") {
       this.setState({
         error: "Please submit a review"
