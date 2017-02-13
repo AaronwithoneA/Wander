@@ -24,10 +24,10 @@ User.create(  email: "fawks@gmail.com",
   password: "1234567",
   fname: "Albus",
   image_url: "http://res.cloudinary.com/dg8v2pvxf/image/upload/v1486582464/od1mvwbejiunfhpnxcvt.jpg" )
-User.create(  email: "destroyallmuggles@gmail.com",
+User.create(  email: "theboywholived@gmail.com",
   password: "1234567",
-  fname: "Lucius",
-  image_url: "http://res.cloudinary.com/dg8v2pvxf/image/upload/v1486575925/gd1vhu5oyvisxd3wwudn.jpg" )
+  fname: "Harry",
+  image_url: "http://res.cloudinary.com/dg8v2pvxf/image/upload/v1487025459/mphmsi1dczgl3gpc3p3r.jpg" )
 User.create(  email: "destroyallmuggles@gmail.com",
   password: "1234567",
   fname: "Lucius",
@@ -113,6 +113,32 @@ User.create(  email: "RubeusHagrid@hogwarts.com",
     title: "All aboard the Hogwarts Express!!",
     house_rules:
      "Please respect that this is primarily a means of transportation for little witches and wizards.  Appropriate language and spells are much appreciated.  ")
+
+   Dwelling.create(  owner_id: User.third.id,
+     location: "Azkaban Prison",
+     price: 70,
+     image_url: "http://res.cloudinary.com/dg8v2pvxf/image/upload/v1487024585/Azkaban_concept_art_zbhoaz.png",
+     description: "Shared",
+     guest_limit: 2,
+     bedrooms: 1,
+     beds: 1,
+     about_this: "This is a once in a lifetime opportunity to share walls with some of the most notorious witches and wizards alive.  You will be given a short tour and lunch and dinner will be provided.  ",
+     title: "Be a prisoner for a night!",
+     house_rules:
+      "Do not taunt the prisoners.  Proceed at your own risk")
+
+  Dwelling.create(  owner_id: User.fourth.id,
+    location: "London",
+    price: 50,
+    image_url: "http://res.cloudinary.com/dg8v2pvxf/image/upload/v1487022726/maxresdefault_aesucc.jpg",
+    description: "Private Room",
+    guest_limit: 2,
+    bedrooms: 1,
+    beds: 1,
+    about_this: "Experience ground zero of the famed Order of the Phoenix, the group of wizards that defeated Lord Voldemort.",
+    title: "Undisclosed location on Grimmauld Place",
+    house_rules:
+     "Please respect the heros that are no longer with us.")
   # Dwelling.create(  owner_id: 28,
   #  location: "TBD",
   #  price: 35,

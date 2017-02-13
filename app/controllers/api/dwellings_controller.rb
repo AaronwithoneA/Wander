@@ -3,18 +3,16 @@ class Api::DwellingsController < ApplicationController
     @dwelling = Dwelling.new(dwelling_params)
     @dwelling.image_url != "" ||
       @dwelling.image_url = "http://res.cloudinary.com/dg8v2pvxf/image/upload/v1487023513/Ror_ootp_movie_nstksy.png"
+    @dwelling.title != "" ||
+      @dwelling.title = "If you have to ask, you will never know"
     @dwelling.location != "" ||
-      @dwelling.location = "If you have to ask, you will never know."
-    @dwelling.about_this != "" ||
-      @dwelling.about_this = " If you know, you need only to ask"
+      @dwelling.location = " If you know, you need only to ask"
     @dwelling.description != "" ||
       @dwelling.description = "Entire Home"
-    @dwelling.bedrooms != "" ||
-      @dwelling.bedrooms = " If you know, you need only to ask"
-          @dwelling.about_this != "" ||
-            @dwelling.about_this = " If you know, you need only to ask"
-            @dwelling.about_this != "" ||
-              @dwelling.about_this = " If you know, you need only to ask"
+    @dwelling.bedrooms ||= 2
+    @dwelling.beds ||= 2
+    @dwelling.guest_limit ||= 2
+    @dwelling.price ||= 60
     @dwelling.owner_id = current_user.id
     if @dwelling.save
       render :show
