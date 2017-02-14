@@ -18,10 +18,9 @@ componentDidMount() {
   this.props.fetchSearchLocations("");
 }
  handlePriceChange (value) {
-  //  return e => {
-     this.setState({maxPrice: value});
-     this.props.updateFilter("maxPrice", this.state.maxPrice);
-  //  } ;
+   this.setState({maxPrice: value});
+   this.props.updateFilter("maxPrice", this.state.maxPrice);
+
  }
 
  update (field) {

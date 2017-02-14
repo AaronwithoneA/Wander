@@ -56,7 +56,7 @@ class BookingIndex extends React.Component {
                                 {booking.dates}
                               </div>
                               <div className="booking-dates-guest">
-                                {booking.guest_number} guests
+                                {booking.guest_number} guest(s)
                               </div>
                               <button
                                 onClick={this.handleDelete(booking.id)}

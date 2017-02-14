@@ -6,7 +6,6 @@ import DwellingMap from './dwelling_map';
 class Search extends React.Component {
 
   render () {
-    console.log(this.props);
     return (
       <div className="dwelling-index-page">
         <div className="search-box">

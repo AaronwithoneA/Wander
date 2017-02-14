@@ -73,14 +73,14 @@
   border: none;
   outline: none;
   border: 1px solid transparent;
-  font-weight: bold;
+  font-weight: bolder;
   filter: contrast(2) brightness(1.5);
 }
 
 .nav-bar-photo {
   width: 40px;
   height: 40px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .nav-button:hover {
@@ -914,7 +914,7 @@ margin-right: 10px;
 .booking-box {
   height: 650px;
   width: 350px;
-  min-width: 300px;
+  min-width: 350px;
   box-sizing: border-box;
   margin: 20px;
   border: 1px solid grey;
@@ -975,7 +975,6 @@ margin-right: 10px;
   padding: 70px auto 0 auto;
   height: 20%;
   font-size: 34px;
-  font-family: inherit;
   color: inherit;
   display: flex;
   flex-direction: row;
@@ -1081,6 +1080,13 @@ margin-right: 10px;
   font-family: inherit;
   padding-right: 30px;
   font: #1e1b15;
+}
+
+.empty-search {
+  width: 100%;
+  text-align: center;
+  margin: 20px auto;
+  font-size: 25px;
 }
 
 .dwelling-index-container {
