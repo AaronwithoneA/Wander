@@ -31,27 +31,33 @@ class BookingIndex extends React.Component {
                           <li className="booking-box"
                             key={idx}
                              onClick={this.imageLink(`/dwellings/${booking.dwelling_id}`)}>
-                            <img
-                              className="booking-image"
-                              src={booking.dwellingImage}
-                              ></img>
-                            <div className="booking-info">
+                            <div className="booking-image-box">
+                              <img
+                                className="booking-image"
+                                src={booking.dwellingImage}
+                                ></img>
+
                               <div className="booking-host-image-box">
                                 <img className ="booking-host-image"
                                 src={booking.ownerImage}/>
                               </div>
-                              <div className="booking-location">
-                                {booking.dwellingLocation}
-                              </div>
+                            </div>
+
+                            <div className="booking-location">
+                              {booking.dwellingLocation}
+                            </div>
+
+                            <div className="booking-info">
+
+                              <h4 className="booking-title">
+                                {booking.dwellingTitle}
+                              </h4>
                               <div className="booking-dates-guest">
                                 {booking.dates}
                               </div>
                               <div className="booking-dates-guest">
                                 {booking.guest_number} guests
                               </div>
-                              <h4 className="booking-title">
-                                {booking.dwellingTitle}
-                              </h4>
                               <button
                                 onClick={this.handleDelete(booking.id)}
                                 className="delete-booking-button">Cancel Booking</button>
