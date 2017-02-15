@@ -30,7 +30,6 @@ Logged in users can book dwellings for specific dates and number of guests by ma
 Bookings are rendered in /bookings and filtered for the logged in user who can view and cancel their bookings.
 
 ####Bookings index
-![images](app/assets/images/booking_component.png)
 ![images](app/assets/images/booking_index.png)
 
 ###Reviews
@@ -46,4 +45,4 @@ Reviews are rendered in the reviews component within the associated dwelling com
 Logged in users can create new dwelling listings under the "Become a Host" button on the navbar.  The dwelling creation form includes
 input fields for all information rendered in the dwelling component, including image upload.
 
-![images](app/assets/images/dwelling_creation2.png)
+![images](app/assets/images/dwelling_form2.png)
