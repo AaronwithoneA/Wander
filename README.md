@@ -15,14 +15,14 @@ The dwelling component renders all information about the dwelling and reviews.
 
 ####Dwelling Component
 
-![image of dwelling](app/assets/images/dwelling_component.png)
+![images](app/assets/images/dwelling_component2.png)
 
 ###Dwelling search
 
 There is an active search bar on /home that allows for search by maximum price and location.  The dwellings will responsively match selected filter.
 
 ####Search Component
-![image of search](app/assets/images/search_component.png)
+![images](app/assets/images/search_component2.png)
 
 ###Bookings
 
@@ -30,7 +30,8 @@ Logged in users can book dwellings for specific dates and number of guests by ma
 Bookings are rendered in /bookings and filtered for the logged in user who can view and cancel their bookings.
 
 ####Bookings index
-![image of bookings](app/assets/images/booking_component.png)
+![images](app/assets/images/booking_component.png)
+![images](app/assets/images/booking_index.png)
 
 ###Reviews
 
@@ -38,11 +39,11 @@ Logged in users can leave reviews for dwellings. Reviews are stored in the datab
 Reviews are rendered in the reviews component within the associated dwelling component.
 
 ####Reviews
-![image of reviews](app/assets/images/review_component.png)
+![images](app/assets/images/review_component2.png)
 
 
 ###Dwelling creation
 Logged in users can create new dwelling listings under the "Become a Host" button on the navbar.  The dwelling creation form includes
 input fields for all information rendered in the dwelling component, including image upload.
 
-![image of dwelling creation](app/assets/images/dwelling_creation.png)
+![images](app/assets/images/dwelling_creation2.png)
