@@ -30,7 +30,7 @@ Logged in users can book dwellings for specific dates and number of guests by ma
 Bookings are rendered in /bookings and filtered for the logged in user who can view and cancel their bookings.
 
 ####Bookings index
-![images](app/assets/images/booking_component2.png)
+![images](app/assets/images/Booking_component2.png)
 ![images](app/assets/images/booking_index.png)
 
 ###Reviews
