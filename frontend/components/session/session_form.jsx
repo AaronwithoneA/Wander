@@ -188,7 +188,9 @@ class SessionForm extends React.Component {
   								className="login-input" />
   						</label>
               {this.formDifs()}
-  						<input className="form-button" type="submit" value="Alohomora!" />
+              <button className="form-button"
+                onClick={this.handleSubmit}>Alohomora!</button>
+
   					</div>
             {this.navLink()}
   				</form>
