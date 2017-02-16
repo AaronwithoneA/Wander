@@ -1165,6 +1165,7 @@ margin-right: 10px;
   border: 1px solid grey;
   box-shadow: 3px 3px 10px 5px #000;
   transform: scale(.9);
+  font-size: 16px;
 }
 
 .dwelling-index-image {
@@ -1191,7 +1192,7 @@ margin-right: 10px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  padding: 0 10px;
+  padding: 0 10px 0 10px;
   font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 }
 
@@ -1202,6 +1203,7 @@ margin-right: 10px;
 
 .index-rating {
   margin: 7px 0 0 10px;
+  width: 110px;
 }
 
 .index-stars {
