@@ -9,7 +9,8 @@ class SessionForm extends React.Component {
     this.state = {
         email: "",
         password: "",
-        image_url: ""
+        image_url: "",
+        fname: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleGuest = this.handleGuest.bind(this);
@@ -17,6 +18,9 @@ class SessionForm extends React.Component {
     this.handleSignUpButton = this.handleSignUpButton.bind(this);
     this.handleLoginButton = this.handleLoginButton.bind(this);
     this.handlePhoto = this.handlePhoto.bind(this);
+    this.handleclose = this.handleClose.bind(this);
+    this.formDifs = this.formDifs.bind(this);
+    this.formStyle = this.formStyle.bind(this);
   }
 
   componentDidUpdate() {
@@ -55,6 +59,10 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
+  handleClose () {
+   hashHistory.push('/');
+ }
+
   handleSignUpButton(e) {
     e.preventDefault();
     hashHistory.push("/signup");
@@ -86,6 +94,33 @@ class SessionForm extends React.Component {
     }
   }
 
+  formDifs () {
+    if (this.props.formType !=="login") {
+      return (
+        <label>
+          <input type="text"
+            value={this.state.fname}
+            placeholder="First Name"
+            onChange={this.update("fname")}
+            className="login-input" />
+                  <button className ="form-button" onClick={this.handlePhoto}>Upload Photo</button>
+        </label>
+      );
+    } else {
+      return (
+        <button className ="form-button" onClick={this.handleGuest}>Demo</button>
+      );
+    }
+  }
+
+  formStyle () {
+    if (this.props.formType === "login") {
+      return "login-form-container";
+    } else {
+      return "signup-form-container";
+    }
+  }
+
   renderErrors() {
     return(
       <ul>
@@ -113,22 +148,27 @@ class SessionForm extends React.Component {
         }
       }
     );
-
   }
 
   render() {
 		return (
       <div>
         <div className="login-background"></div>
-  			<div className="login-form-container">
+  			<div className={this.formStyle()}>
   				<form onSubmit={this.handleSubmit} className="login-form-box">
-
+            <div className='login-form-top'>
               <img
                 className="form-logo"
                 src="https://res.cloudinary.com/dg8v2pvxf/image/upload/c_crop,h_1473/v1484790087/wander03_vs5vxa.jpg"
                 />
-
+              <div className="close-form-button-box">
+                <img
+                 className="close-form-button"
+                 src="http://res.cloudinary.com/dg8v2pvxf/image/upload/c_crop,w_530/v1487201546/noun_392992_cc_vx1nm0.png"
+                 onClick={this.handleClose}/>
+              </div>
               <br />
+            </div>
             <div className="errors">
               {this.renderErrors()}
             </div>
@@ -147,10 +187,9 @@ class SessionForm extends React.Component {
   								onChange={this.update("password")}
   								className="login-input" />
   						</label>
+              {this.formDifs()}
   						<input className="form-button" type="submit" value="Alohomora!" />
   					</div>
-            <button className ="form-button" onClick={this.handlePhoto}>Photo</button>
-            <button className ="form-button" onClick={this.handleGuest}>Demo</button>
             {this.navLink()}
   				</form>
   			</div>
