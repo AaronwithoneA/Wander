@@ -129,10 +129,8 @@ total() {
               <div>{this.total()}</div>
             </div>
             <div className="booking-form-button-container">
-              <input
-                className="booking-form-button"
-                type="submit"
-                value="wingardium leviosa!" />
+              <button className="booking-form-button"
+                onClick={this.handleSubmit}>Wingardium Leviosa!</button>
             {this.state.error}
             </div>
 

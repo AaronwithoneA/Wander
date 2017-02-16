@@ -190,7 +190,6 @@ class SessionForm extends React.Component {
               {this.formDifs()}
               <button className="form-button"
                 onClick={this.handleSubmit}>Alohomora!</button>
-
   					</div>
             {this.navLink()}
   				</form>

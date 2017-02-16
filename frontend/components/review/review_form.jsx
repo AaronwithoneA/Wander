@@ -85,37 +85,12 @@ class ReviewForm extends React.Component {
             value={this.state.body}
             onChange={this.update("body")}
             className="review-input"></textarea>
-          <input
-            className="review-form-button"
-            type="submit"
-            value="Sonorus" />
+          <button className="review-form-button"
+            onClick={this.handleSubmit}>Sonorus!</button>
         </form>
       </div>
     );
   }
 }
 
-// <label> 1
-//   <input className="review-rating" type="radio" name="rating"
-//     value="1" onChange={this.update("rating")}/>
-// </label>
-// <label>2
-//   <input className="review-rating" type="radio" name="rating"
-//     value="2" onChange={this.update("rating")}/>
-// </label>
-//
-// <label>3
-//   <input className="review-rating" type="radio" name="rating"
-//     value="3" onChange={this.update("rating")}/>
-// </label>
-//
-// <label>4
-//   <input className="review-rating" type="radio" name="rating"
-//     value="4" onChange={this.update("rating")}/>
-// </label>
-//
-// <label>5
-//   <input className="review-rating" type="radio" name="rating"
-//     value="5" onChange={this.update("rating")}/>
-// </label>
 export default ReviewForm;
