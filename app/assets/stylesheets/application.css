@@ -984,7 +984,6 @@ margin-right: 10px;
 
 .booking-box:hover {
   transform: scale(1.05);
-  cursor: pointer;
 }
 
 .booking-image-box {
@@ -999,9 +998,8 @@ margin-right: 10px;
 }
 .booking-image {
   height: 100%;
-  width: 100%
-  /*filter: blur(2px);*/
-/*-webkit-filter: blur(2px);*/
+  width: 100%;
+  cursor: pointer;
 }
 
 .booking-host-image-box {
